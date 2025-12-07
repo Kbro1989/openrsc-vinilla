@@ -4,6 +4,7 @@ const NPC = require('../model/npc');
 const items = require('@2003scape/rsc-data/config/items');
 const quests = require('@2003scape/rsc-data/quests');
 const regions = require('@2003scape/rsc-data/regions');
+const questDependencies = require('./quest-dependencies');
 const { levelToExperience } = require('../skills');
 const { handleClanCommand, handleClanChat } = require('../clan-system');
 const { handleBankPinCommand } = require('../bank-pin');
@@ -494,13 +495,35 @@ async function command({ player }, { command, args }) {
                             player.message('Please use chat commands: ::summon/goto/kill/kick <username>');
                         }
                     } else if (adminChoice === 2) {
-                        const qChoice = await player.ask(['Set Quest Stage >>', 'Complete All F2P (Beta)', '[Back]']);
+                        const qChoice = await player.ask(['Set Quest Stage >>', 'Complete Quest (Recursive) >>', '[Back]']);
                         if (qChoice === 0) {
                             player.message('Use ::setquest <questName> <stage>');
                         } else if (qChoice === 1) {
-                            // Example quick complete for Dragon Slayer (testing)
-                            player.questStages['dragonSlayer'] = 5; // Complete
-                            player.message('Dragon Slayer set to complete (Stage 5)');
+                            const questNames = Object.keys(questDependencies);
+                            questNames.push('Dragon Slayer'); // Ensure DS is there if not in keys
+                            questNames.push('[Back]');
+                            // De-dupe
+                            const uniqueQuests = [...new Set(questNames)];
+
+                            const targetQIdx = await player.ask(uniqueQuests);
+                            const targetQuest = uniqueQuests[targetQIdx];
+
+                            if (targetQuest && targetQuest !== '[Back]') {
+                                const completeRecursively = (qName) => {
+                                    const reqs = questDependencies[qName] || [];
+                                    reqs.forEach(req => completeRecursively(req));
+
+                                    // Set to generic "Complete" stage (usually 100 or -1, using 100 for safety)
+                                    // Check if already completed to avoid spam
+                                    if (!player.questStages[qName] || player.questStages[qName] < 100) {
+                                        player.questStages[qName] = 100;
+                                        player.message(`Completed: ${qName}`);
+                                    }
+                                };
+
+                                completeRecursively(targetQuest);
+                                player.message(`All requirements for ${targetQuest} completed.`);
+                            }
                         }
                     }
 
