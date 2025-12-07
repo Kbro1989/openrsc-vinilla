@@ -35,4 +35,10 @@ function formatSkillName(skill) {
     return skill.slice(0, 1).toUpperCase() + skill.slice(1, skill.length);
 }
 
-module.exports = { experienceToLevel, formatSkillName };
+function levelToExperience(level) {
+    if (level < 1) return 0;
+    if (level >= 99) return EXPERIENCE_ARRAY[98];
+    return EXPERIENCE_ARRAY[level - 1];
+}
+
+module.exports = { experienceToLevel, levelToExperience, formatSkillName };

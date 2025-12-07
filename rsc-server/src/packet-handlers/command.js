@@ -4,6 +4,7 @@ const NPC = require('../model/npc');
 const items = require('@2003scape/rsc-data/config/items');
 const quests = require('@2003scape/rsc-data/quests');
 const regions = require('@2003scape/rsc-data/regions');
+const { levelToExperience } = require('../skills');
 const { handleClanCommand, handleClanChat } = require('../clan-system');
 const { handleBankPinCommand } = require('../bank-pin');
 const { handlePartyCommand, handlePartyChat } = require('../party-system');
@@ -291,6 +292,7 @@ async function command({ player }, { command, args }) {
             const skillName = Object.keys(player.skills)[skillIndex];
             player.skills[skillName].current = level;
             player.skills[skillName].base = level;
+            player.skills[skillName].experience = levelToExperience(level);
             player.sendStats();
             player.message(`Set ${args[0]} to level ${level}`);
             break;
