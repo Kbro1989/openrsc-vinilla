@@ -32,7 +32,7 @@ const DEFAULT_PLAYER = {
         attack: { current: 1, experience: 0 },
         defense: { current: 1, experience: 0 },
         strength: { current: 1, experience: 0 },
-        hits: { current: 10, experience: 1200 }, // RSC Level 10 (1154 XP)
+        hits: { current: 9, experience: 3876 }, // RSC Level 9 (969 XP * 4)
         ranged: { current: 1, experience: 0 },
         prayer: { current: 1, experience: 0 },
         magic: { current: 1, experience: 0 },
