@@ -20,24 +20,22 @@ FEATURE_UNLIMITED = "false"
 FEATURE_BACKUPS = "false"
 SHARD_MAPPING = '{"US":"DO_AMERICAS", "GB":"DO_EUROPE", "DE":"DO_EUROPE", "JP":"DO_ASIA", "AU":"DO_OCEANIA"}'
 
-# 3. DURABLE OBJECTS (Not typically used in static Pages, but kept for Worker integration if via Functions)
-# Note: Bindings in Pages usually scoped to Functions.
-[[durable_objects.bindings]]
-name = "DO_AMERICAS"
-class_name = "GameWorld"
-script_name = "rsc-server-do"
+# [[durable_objects.bindings]]
+# name = "DO_AMERICAS"
+# class_name = "GameWorld"
+# script_name = "rsc-server-do"
 
-[[durable_objects.bindings]]
-name = "DO_EUROPE"
-class_name = "GameWorld"
-script_name = "rsc-server-do"
+# [[durable_objects.bindings]]
+# name = "DO_EUROPE"
+# class_name = "GameWorld"
+# script_name = "rsc-server-do"
 
-[[durable_objects.bindings]]
-name = "DO_ASIA"
-class_name = "GameWorld"
-script_name = "rsc-server-do"
+# [[durable_objects.bindings]]
+# name = "DO_ASIA"
+# class_name = "GameWorld"
+# script_name = "rsc-server-do"
 
-[[durable_objects.bindings]]
-name = "DO_OCEANIA"
-class_name = "GameWorld"
-script_name = "rsc-server-do"
+# [[durable_objects.bindings]]
+# name = "DO_OCEANIA"
+# class_name = "GameWorld"
+# script_name = "rsc-server-do"
