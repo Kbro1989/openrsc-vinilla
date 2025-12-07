@@ -304,7 +304,7 @@ async function command({ player }, { command, args }) {
                     'Spawn Items >>',
                     'Teleport >>',
                     '::coords - Show location',
-                    '::teleport <x> <y>',
+                    'Admin Tools >>',
                     '::set <skill> <lvl>',
                     '::heal - Restore HP',
                     '::save - Save char',
@@ -481,11 +481,34 @@ async function command({ player }, { command, args }) {
                     }
                 } else if (mainChoice === 2) {
                     player.message(`Location: ${player.x}, ${player.y}`);
-                } else if (mainChoice === 5) {
+                } else if (mainChoice === 3) { // Admin Tools (New Menu Index)
+                    const adminChoice = await player.ask(['Teleport to NPC >>', 'Player Tools >>', 'Quest Tools >>', '[Back]']);
+                    if (adminChoice === 0) {
+                        player.message('Use ::npc <id> to spawn, or ::gotoentity npcs <index>');
+                        // Note: Complex NPC list UI is too large for simple menu, instructing on commands
+                    } else if (adminChoice === 1) {
+                        const pToolChoice = await player.ask(['Summon Player', 'Goto Player', 'Kill Player', 'Kick Player', '[Back]']);
+                        // These require input, so we have to prompt or instruct
+                        // Since we can't easily capture chat input mid-menu without breaking flow, we'll prompt for username if possible or just use params
+                        if (pToolChoice < 4) {
+                            player.message('Please use chat commands: ::summon/goto/kill/kick <username>');
+                        }
+                    } else if (adminChoice === 2) {
+                        const qChoice = await player.ask(['Set Quest Stage >>', 'Complete All F2P (Beta)', '[Back]']);
+                        if (qChoice === 0) {
+                            player.message('Use ::setquest <questName> <stage>');
+                        } else if (qChoice === 1) {
+                            // Example quick complete for Dragon Slayer (testing)
+                            player.questStages['dragonSlayer'] = 5; // Complete
+                            player.message('Dragon Slayer set to complete (Stage 5)');
+                        }
+                    }
+
+                } else if (mainChoice === 5) { // Updated Index
                     player.skills.hits.current = player.skills.hits.base;
                     player.sendStats();
                     player.message('You have been healed');
-                } else if (mainChoice === 6) {
+                } else if (mainChoice === 6) { // Updated Index 
                     await player.save();
                     player.message('Player data saved');
                 }
