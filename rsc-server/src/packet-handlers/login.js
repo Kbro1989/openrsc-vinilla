@@ -54,12 +54,14 @@ async function login(socket, message) {
         process.nextTick(() => socket.close());
     }
 
+    console.error(`[LOGIN DEBUG] Calling dataClient.playerLogin for ${username}...`);
     const { code, success, player } = await dataClient.playerLogin({
         username,
         password,
         ip: socket.getIPAddress(),
         reconnecting
     });
+    console.error(`[LOGIN DEBUG] dataClient.playerLogin returned: code=${code}, success=${success}`);
 
     socket.send(Buffer.from([code]));
 
