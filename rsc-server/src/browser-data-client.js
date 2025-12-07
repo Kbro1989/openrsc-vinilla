@@ -209,7 +209,9 @@ class BrowserDataClient {
                     } else {
                         // Browser Fetch Mode (Authentic Client Shared Persistence)
                         try {
+                            log.info(`[BDC] Fetching player ${message.username} from API...`);
                             const response = await fetch(`/api/player/load?username=${encodeURIComponent(message.username)}`);
+                            log.info(`[BDC] API Response: ${response.status} ${response.statusText}`);
                             if (response.ok) {
                                 player = await response.json();
                                 log.info(`Player loaded from API: ${player.username}`);
