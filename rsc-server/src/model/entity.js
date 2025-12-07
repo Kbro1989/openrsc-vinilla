@@ -280,6 +280,11 @@ class Entity {
             y <= region.maxY
         );
     }
+
+    toString() {
+        const identifier = this.username ? ` username=${this.username}` : '';
+        return `[${this.constructor.name} index=${this.index} id=${this.id}${identifier} x=${this.x} y=${this.y}]`;
+    }
 }
 
 module.exports = Entity;

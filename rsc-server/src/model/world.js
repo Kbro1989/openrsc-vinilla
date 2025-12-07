@@ -264,7 +264,9 @@ class World {
 
     removeEntity(type, entity) {
         if (!this[type].remove(entity)) {
-            throw new Error(`unable to remove entity ${entity}`);
+            // throw new Error(`unable to remove entity ${entity}`);
+            log.warn(`unable to remove entity (already removed?): ${entity}`);
+            return;
         }
 
         // OpenRSC-style region de-registration
