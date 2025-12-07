@@ -302,6 +302,7 @@ async function command({ player }, { command, args }) {
             try {
                 const mainChoice = await player.ask([
                     'Spawn Items >>',
+                    'Teleport >>',
                     '::coords - Show location',
                     '::teleport <x> <y>',
                     '::set <skill> <lvl>',
@@ -454,12 +455,37 @@ async function command({ player }, { command, args }) {
                         }
                     }
                 } else if (mainChoice === 1) {
+                    const teleportChoice = await player.ask(['Towns >>', 'Wilderness >>', 'Points of Interest >>', '[Back]']);
+                    if (teleportChoice === 0) { // Towns
+                        const townChoice = await player.ask([
+                            'Varrock', 'Falador', 'Lumbridge', 'Edgeville',
+                            'Draynor', 'Al-Kharid', 'Port Sarim', 'Ardougne', '[Back]'
+                        ]);
+                        const towns = [
+                            { x: 120, y: 504 }, { x: 312, y: 552 }, { x: 120, y: 648 }, { x: 216, y: 451 },
+                            { x: 214, y: 632 }, { x: 72, y: 696 }, { x: 269, y: 648 }, { x: 588, y: 521 }
+                        ];
+                        if (townChoice < towns.length) {
+                            player.teleport(towns[townChoice].x, towns[townChoice].y, true);
+                        }
+                    } else if (teleportChoice === 1) { // Wilderness
+                        const wildChoice = await player.ask(['Edgeville (PvP)', 'Castle (Lvl 14)', 'Mage Arena (Lvl 50)', '[Back]']);
+                        if (wildChoice === 0) player.teleport(215, 436, true);
+                        if (wildChoice === 1) player.teleport(268, 342, true);
+                        if (wildChoice === 2) player.teleport(446, 3373, true); // Inside Arena
+                    } else if (teleportChoice === 2) { // POI
+                        const poiChoice = await player.ask(['Karamja', 'Draynor Manor', 'Guilds >>', 'Tutorial Island', '[Back]']);
+                        if (poiChoice === 0) player.teleport(324, 713, true);
+                        if (poiChoice === 1) player.teleport(210, 558, true);
+                        if (poiChoice === 3) player.teleport(216, 744, true);
+                    }
+                } else if (mainChoice === 2) {
                     player.message(`Location: ${player.x}, ${player.y}`);
-                } else if (mainChoice === 4) {
+                } else if (mainChoice === 5) {
                     player.skills.hits.current = player.skills.hits.base;
                     player.sendStats();
                     player.message('You have been healed');
-                } else if (mainChoice === 5) {
+                } else if (mainChoice === 6) {
                     await player.save();
                     player.message('Player data saved');
                 }
