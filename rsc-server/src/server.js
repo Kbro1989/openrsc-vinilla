@@ -207,6 +207,7 @@ class Server {
 
             await this.world.loadData();
             this.world.tick();
+            this.world.saveAllPlayers(); // Start the autosave loop
 
             this.loadPacketHandlers();
 

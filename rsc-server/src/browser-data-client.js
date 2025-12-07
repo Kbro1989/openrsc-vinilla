@@ -79,8 +79,8 @@ class BrowserDataClient {
             log.info('BrowserDataClient initialized (Durable Object KV mode)');
             console.log('%c RSC DURABLE OBJECT KV MODE ', 'background: #ff6600; color: white; font-size: 20px');
         } else {
-            log.info('BrowserDataClient initialized (Browser Worker memory mode)');
-            console.log('%c RSC WORKER MEMORY MODE ', 'background: #222; color: #bada55; font-size: 20px');
+            log.info('BrowserDataClient initialized (Browser Fetch Mode - KV/API)');
+            console.log('%c RSC BROWSER FETCH MODE (KV/API) ', 'background: #222; color: #bada55; font-size: 20px');
             // Note: Workers can't access localStorage, using in-memory Map
         }
     }
