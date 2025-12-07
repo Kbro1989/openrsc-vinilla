@@ -1,0 +1,28 @@
+{
+    "logs": {
+        "14": {
+            "level": 1,
+            "experience": 25
+        },
+        "632": {
+            "level": 15,
+            "experience": 60
+        },
+        "633": {
+            "level": 30,
+            "experience": 90
+        },
+        "634": {
+            "level": 45,
+            "experience": 135
+        },
+        "635": {
+            "level": 60,
+            "experience": 202.5
+        },
+        "636": {
+            "level": 75,
+            "experience": 303.8
+        }
+    }
+}

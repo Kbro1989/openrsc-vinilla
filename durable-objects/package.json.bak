@@ -1,0 +1,13 @@
+{
+    "name": "rsc-server-do",
+    "version": "1.0.0",
+    "description": "RSC Server Durable Object Worker",
+    "scripts": {
+        "build": "node build.js",
+        "deploy": "npm run build && wrangler deploy",
+        "dev": "wrangler dev"
+    },
+    "devDependencies": {
+        "esbuild": "^0.19.0"
+    }
+}

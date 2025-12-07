@@ -1,0 +1,184 @@
+# Admin Area - Staff Only
+# Location: 50, 50 (outside normal map bounds)
+
+# Exit Portal (returns to Lumbridge)
+object = 60, 50, 55
+
+# Common Items Row 1 (x=45-65, y=52)
+item = 10, 45, 52    # Coins (1000gp stack)
+item = 31, 46, 52    # Bronze pickaxe
+item = 156, 47, 52   # Iron pickaxe
+item = 1258, 48, 52  # Steel pickaxe
+item = 1259, 49, 52  # Mithril pickaxe
+item = 1260, 50, 52  # Adamantite pickaxe
+item = 1261, 51, 52  # Rune pickaxe
+
+item = 87, 52, 52    # Bronze axe
+item = 88, 53, 52    # Iron axe
+item = 89, 54, 52    # Steel axe
+item = 90, 55, 52    # Mithril axe
+item = 91, 56, 52    # Adamantite axe
+item = 92, 57, 52    # Rune axe
+
+# Food Row (y=53)
+item = 132, 45, 53   # Bread
+item = 138, 46, 53   # Meat
+item = 142, 47, 53   # Lobster
+item = 373, 48, 53   # Swordfish
+item = 546, 49, 53   # Shark
+item = 335, 50, 53   # Cake
+item = 21, 51, 53    # Cabbage
+
+# Potions Row (y=54)
+item = 473, 45, 54   # Attack potion
+item = 474, 46, 54   # Strength potion  
+item = 475, 47, 54   # Defense potion
+item = 476, 48, 54   # Restore prayer
+item = 477, 49, 54   # Super attack
+item = 478, 50, 54   # Super strength
+item = 479, 51, 54   # Super defense
+
+# Runes Row (y=55)
+item = 31, 45, 55    # Air rune
+item = 32, 46, 55    # Water rune
+item = 33, 47, 55    # Earth rune
+item = 34, 48, 55    # Fire rune
+item = 35, 49, 55    # Mind rune
+item = 36, 50, 55    # Body rune
+item = 37, 51, 55    # Cosmic rune
+item = 38, 52, 55    # Chaos rune
+item = 39, 53, 55    # Nature rune
+item = 40, 54, 55    # Law rune
+item = 41, 55, 55    # Death rune
+item = 42, 56, 55    # Blood rune
+
+# Armor Sets Row (y=56-58)
+# Bronze
+item = 3, 45, 56     # Bronze platebody
+item = 88, 45, 57    # Bronze platelegs
+item = 206, 45, 58   # Bronze full helm
+
+# Iron
+item = 4, 46, 56     # Iron platebody
+item = 89, 46, 57    # Iron platelegs
+item = 207, 46, 58   # Iron full helm
+
+# Steel
+item = 5, 47, 56     # Steel platebody
+item = 90, 47, 57    # Steel platelegs
+item = 208, 47, 58   # Steel full helm
+
+# Mithril
+item = 6, 48, 56     # Mithril platebody
+item = 91, 48, 57    # Mithril platelegs
+item = 209, 48, 58   # Mithril full helm
+
+# Adamantite
+item = 7, 49, 56     # Adamantite platebody
+item = 92, 49, 57    # Adamantite platelegs
+item = 210, 49, 58   # Adamantite full helm
+
+# Rune
+item = 8, 50, 56     # Rune platebody
+item = 93, 50, 57    # Rune platelegs
+item = 211, 50, 58   # Rune full helm
+
+# Dragon
+item = 795, 51, 56   # Dragon platebody (if exists)
+item = 796, 51, 57   # Dragon platelegs (if exists)
+
+# Weapons Row (y=59)
+item = 70, 45, 59    # Iron Sword
+item = 71, 46, 59    # Steel Sword
+item = 72, 47, 59    # Mithril Sword
+item = 73, 48, 59    # Adamantite Sword
+item = 74, 49, 59    # Rune Sword
+
+# Bows & Arrows (y=60)
+item = 188, 45, 60   # Shortbow
+item = 189, 46, 60   # Longbow
+item = 190, 47, 60   # Oak shortbow
+item = 191, 48, 60   # Oak longbow
+item = 648, 49, 60   # Willow shortbow
+item = 649, 50, 60   # Willow longbow
+
+item = 11, 51, 60    # Bronze arrows
+item = 12, 52, 60    # Iron arrows
+item = 13, 53, 60    # Steel arrows
+item = 14, 54, 60    # Mithril arrows
+item = 15, 55, 60    # Adamantite arrows
+item = 16, 56, 60    # Rune arrows
+
+# Teleport Tabs & Special Items (y=61)
+item = 1166, 45, 61  # Law talisman
+item = 1165, 46, 61  # Nature talisman
+item = 1163, 47, 61  # Chaos talisman
+item = 1164, 48, 61  # Cosmic talisman
+
+# Crafting Materials (y=62)
+item = 44, 45, 62    # Flax
+item = 677, 46, 62   # Bow string
+item = 144, 47, 62   # Leather
+item = 145, 48, 62   # Hard leather
+item = 146, 49, 62   # Dragon leather
+
+# Ores & Bars (y=63)
+item = 150, 45, 63   # Copper ore
+item = 151, 46, 63   # Tin ore
+item = 152, 47, 63   # Iron ore
+item = 153, 48, 63   # Coal
+item = 154, 49, 63   # Gold ore
+item = 155, 50, 63   # Mithril ore
+item = 157, 51, 63   # Adamantite ore
+item = 409, 52, 63   # Runite ore
+
+item = 
+169, 45, 64   # Bronze bar
+item = 170, 46, 64   # Iron bar
+item = 171, 47, 64   # Steel bar
+item = 172, 48, 64   # Mithril bar
+item = 173, 49, 64   # Adamantite bar
+item = 174, 50, 64   # Runite bar
+
+# Gems (y=65)
+item = 160, 45, 65   # Uncut sapphire
+item = 161, 46, 65   # Uncut emerald
+item = 162, 47, 65   # Uncut ruby
+item = 163, 48, 65   # Uncut diamond
+item = 523, 49, 65   # Uncut dragonstone
+
+item = 164, 50, 65   # Sapphire
+item = 165, 51, 65   # Emerald
+item = 166, 52, 65   # Ruby
+item = 167, 53, 65   # Diamond
+item = 524, 54, 65   # Dragonstone
+
+# Logs (y=66)
+item = 14, 45, 66    # Logs
+item = 632, 46, 66   # Oak logs
+item = 633, 47, 66   # Willow logs
+item = 634, 48, 66   # Maple logs
+item = 635, 49, 66   # Yew logs
+item = 636, 50, 66   # Magic logs
+
+# Fish (y=67)
+item = 349, 45, 67   # Raw shrimp
+item = 350, 46, 67   # Raw anchovies
+item = 356, 47, 67   # Raw trout
+item = 358, 48, 67   # Raw pike
+item = 359, 49, 67   # Raw salmon
+item = 364, 50, 67   # Raw lobster
+item = 371, 51, 67   # Raw swordfish
+item = 545, 52, 67   # Raw shark
+
+# Misc Useful (y=68)
+item = 135, 45, 68   # Tinderbox
+item = 379, 46, 68   # Chisel
+item = 168, 47, 68   # Hammer
+item = 246, 48, 68   # Needle
+item = 43, 49, 68    # Thread
+item = 464, 50, 68   # Pestle and mortar
+item = 139, 51, 68   # Knife
+item = 112, 52, 68   # Bucket
+item = 21, 53, 68    # Jug
+item = 140, 54, 68   # Shears

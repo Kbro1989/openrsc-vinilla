@@ -1,0 +1,268 @@
+npm verbose cli C:\Users\Destiny\.lmstudio\.internal\utils\node.exe C:\Users\Destiny\AppData\Roaming\npm\node_modules\npm\bin\npm-cli.js
+npm info using npm@11.6.2
+npm info using node@v20.18.0
+npm verbose title npm install
+npm verbose argv "install" "--loglevel" "verbose"
+npm verbose logfile logs-max:10 dir:C:\Users\Destiny\AppData\Local\npm-cache\_logs\2025-12-05T04_03_51_436Z-
+npm verbose logfile C:\Users\Destiny\AppData\Local\npm-cache\_logs\2025-12-05T04_03_51_436Z-debug-0.log
+npm http cache https://registry.npmjs.org/partyserver 27ms (cache hit)
+npm http cache https://registry.npmjs.org/@cloudflare%2fworkers-types 9ms (cache hit)
+npm http cache https://registry.npmjs.org/typescript 37ms (cache hit)
+npm http cache https://registry.npmjs.org/wrangler 65ms (cache hit)
+npm http cache https://registry.npmjs.org/blake3-wasm 40ms (cache hit)
+npm http cache https://registry.npmjs.org/nanoid 45ms (cache hit)
+npm http cache https://registry.npmjs.org/unenv 50ms (cache hit)
+npm http cache https://registry.npmjs.org/path-to-regexp 50ms (cache hit)
+npm http cache https://registry.npmjs.org/esbuild 56ms (cache hit)
+npm http cache https://registry.npmjs.org/@cloudflare%2funenv-preset 65ms (cache hit)
+npm http cache https://registry.npmjs.org/miniflare 92ms (cache hit)
+npm http cache https://registry.npmjs.org/@esbuild-plugins%2fnode-globals-polyfill 124ms (cache hit)
+npm http cache https://registry.npmjs.org/workerd 129ms (cache hit)
+npm http cache https://registry.npmjs.org/@cloudflare%2fkv-asset-handler 131ms (cache hit)
+npm http cache https://registry.npmjs.org/@esbuild-plugins%2fnode-modules-polyfill 132ms (cache hit)
+npm http cache https://registry.npmjs.org/fsevents 94ms (cache hit)
+npm http cache https://registry.npmjs.org/sharp 104ms (cache hit)
+npm http cache https://registry.npmjs.org/@esbuild%2fsunos-x64 32ms (cache hit)
+npm http cache https://registry.npmjs.org/defu 38ms (cache hit)
+npm http cache https://registry.npmjs.org/exsolve 39ms (cache hit)
+npm http cache https://registry.npmjs.org/ufo 42ms (cache hit)
+npm http cache https://registry.npmjs.org/@esbuild%2fwin32-x64 41ms (cache hit)
+npm http cache https://registry.npmjs.org/pathe 50ms (cache hit)
+npm http cache https://registry.npmjs.org/@esbuild%2flinux-x64 52ms (cache hit)
+npm http cache https://registry.npmjs.org/@esbuild%2flinux-arm 55ms (cache hit)
+npm http cache https://registry.npmjs.org/mime 60ms (cache hit)
+npm http cache https://registry.npmjs.org/@esbuild%2fdarwin-x64 59ms (cache hit)
+npm http cache https://registry.npmjs.org/ohash 65ms (cache hit)
+npm http cache https://registry.npmjs.org/@esbuild%2fnetbsd-x64 59ms (cache hit)
+npm http cache https://registry.npmjs.org/@esbuild%2flinux-ia32 69ms (cache hit)
+npm http cache https://registry.npmjs.org/@esbuild%2fwin32-ia32 70ms (cache hit)
+npm http cache https://registry.npmjs.org/@esbuild%2fandroid-arm 71ms (cache hit)
+npm http cache https://registry.npmjs.org/@esbuild%2flinux-arm64 63ms (cache hit)
+npm http cache https://registry.npmjs.org/@esbuild%2ffreebsd-x64 69ms (cache hit)
+npm http cache https://registry.npmjs.org/@esbuild%2fandroid-x64 82ms (cache hit)
+npm http cache https://registry.npmjs.org/@esbuild%2flinux-ppc64 74ms (cache hit)
+npm http cache https://registry.npmjs.org/@esbuild%2flinux-s390x 76ms (cache hit)
+npm http cache https://registry.npmjs.org/@esbuild%2fopenbsd-x64 77ms (cache hit)
+npm http cache https://registry.npmjs.org/@esbuild%2fwin32-arm64 82ms (cache hit)
+npm http cache https://registry.npmjs.org/@esbuild%2fdarwin-arm64 86ms (cache hit)
+npm http cache https://registry.npmjs.org/@esbuild%2fandroid-arm64 84ms (cache hit)
+npm http cache https://registry.npmjs.org/@esbuild%2ffreebsd-arm64 83ms (cache hit)
+npm http cache https://registry.npmjs.org/@esbuild%2flinux-riscv64 79ms (cache hit)
+npm http cache https://registry.npmjs.org/@esbuild%2flinux-loong64 86ms (cache hit)
+npm http cache https://registry.npmjs.org/@esbuild%2flinux-mips64el 83ms (cache hit)
+npm http cache https://registry.npmjs.org/escape-string-regexp 81ms (cache hit)
+npm http cache https://registry.npmjs.org/rollup-plugin-node-polyfills 83ms (cache hit)
+npm http cache https://registry.npmjs.org/ws 80ms (cache hit)
+npm http cache https://registry.npmjs.org/acorn 78ms (cache hit)
+npm http cache https://registry.npmjs.org/zod 95ms (cache hit)
+npm http cache https://registry.npmjs.org/youch 93ms (cache hit)
+npm http cache https://registry.npmjs.org/undici 94ms (cache hit)
+npm http cache https://registry.npmjs.org/exit-hook 102ms (cache hit)
+npm http cache https://registry.npmjs.org/stoppable 101ms (cache hit)
+npm http cache https://registry.npmjs.org/glob-to-regexp 94ms (cache hit)
+npm http cache https://registry.npmjs.org/acorn-walk 100ms (cache hit)
+npm http cache https://registry.npmjs.org/color 89ms (cache hit)
+npm http cache https://registry.npmjs.org/semver 87ms (cache hit)
+npm http cache https://registry.npmjs.org/@cspotcode%2fsource-map-support 101ms (cache hit)
+npm http cache https://registry.npmjs.org/detect-libc 86ms (cache hit)
+npm http cache https://registry.npmjs.org/@img%2fsharp-wasm32 63ms (cache hit)
+npm http cache https://registry.npmjs.org/@img%2fsharp-linux-arm 54ms (cache hit)
+npm http cache https://registry.npmjs.org/@img%2fsharp-linux-x64 44ms (cache hit)
+npm http cache https://registry.npmjs.org/@img%2fsharp-win32-ia32 37ms (cache hit)
+npm http cache https://registry.npmjs.org/@img%2fsharp-darwin-x64 41ms (cache hit)
+npm http cache https://registry.npmjs.org/@img%2fsharp-win32-x64 45ms (cache hit)
+npm http cache https://registry.npmjs.org/@img%2fsharp-linux-s390x 37ms (cache hit)
+npm http cache https://registry.npmjs.org/@img%2fsharp-linux-arm64 42ms (cache hit)
+npm http cache https://registry.npmjs.org/@img%2fsharp-darwin-arm64 38ms (cache hit)
+npm http cache https://registry.npmjs.org/@img%2fsharp-linuxmusl-x64 38ms (cache hit)
+npm http cache https://registry.npmjs.org/@img%2fsharp-libvips-linux-arm 34ms (cache hit)
+npm http cache https://registry.npmjs.org/@img%2fsharp-linuxmusl-arm64 38ms (cache hit)
+npm http cache https://registry.npmjs.org/@img%2fsharp-libvips-linux-arm64 38ms (cache hit)
+npm http cache https://registry.npmjs.org/@img%2fsharp-libvips-linux-s390x 39ms (cache hit)
+npm http cache https://registry.npmjs.org/@img%2fsharp-libvips-darwin-x64 44ms (cache hit)
+npm http cache https://registry.npmjs.org/@img%2fsharp-libvips-linuxmusl-x64 37ms (cache hit)
+npm http cache https://registry.npmjs.org/@img%2fsharp-libvips-linux-x64 48ms (cache hit)
+npm http cache https://registry.npmjs.org/@img%2fsharp-libvips-linuxmusl-arm64 38ms (cache hit)
+npm http cache https://registry.npmjs.org/@cloudflare%2fworkerd-linux-64 39ms (cache hit)
+npm http cache https://registry.npmjs.org/@img%2fsharp-libvips-darwin-arm64 53ms (cache hit)
+npm http cache https://registry.npmjs.org/@cloudflare%2fworkerd-darwin-64 49ms (cache hit)
+npm http cache https://registry.npmjs.org/@cloudflare%2fworkerd-linux-arm64 57ms (cache hit)
+npm http cache https://registry.npmjs.org/@cloudflare%2fworkerd-windows-64 68ms (cache hit)
+npm http cache https://registry.npmjs.org/@cloudflare%2fworkerd-darwin-arm64 58ms (cache hit)
+npm http cache https://registry.npmjs.org/rollup-plugin-inject 5ms (cache hit)
+npm http cache https://registry.npmjs.org/bufferutil 9ms (cache hit)
+npm http cache https://registry.npmjs.org/utf-8-validate 7ms (cache hit)
+npm http cache https://registry.npmjs.org/cookie 16ms (cache hit)
+npm http cache https://registry.npmjs.org/mustache 19ms (cache hit)
+npm http cache https://registry.npmjs.org/@jridgewell%2ftrace-mapping 22ms (cache hit)
+npm http cache https://registry.npmjs.org/stacktracey 23ms (cache hit)
+npm http cache https://registry.npmjs.org/@fastify%2fbusboy 28ms (cache hit)
+npm http cache https://registry.npmjs.org/@jridgewell%2fresolve-uri 10ms (cache hit)
+npm http cache https://registry.npmjs.org/@jridgewell%2fsourcemap-codec 11ms (cache hit)
+npm http cache https://registry.npmjs.org/magic-string 9ms (cache hit)
+npm http cache https://registry.npmjs.org/estree-walker 13ms (cache hit)
+npm http cache https://registry.npmjs.org/rollup-pluginutils 13ms (cache hit)
+npm http cache https://registry.npmjs.org/sourcemap-codec 5ms (cache hit)
+npm http cache https://registry.npmjs.org/color-string 8ms (cache hit)
+npm http cache https://registry.npmjs.org/color-convert 9ms (cache hit)
+npm http cache https://registry.npmjs.org/@emnapi%2fruntime 13ms (cache hit)
+npm http cache https://registry.npmjs.org/tslib 5ms (cache hit)
+npm http cache https://registry.npmjs.org/color-name 11ms (cache hit)
+npm http cache https://registry.npmjs.org/color-name 12ms (cache hit)
+npm http cache https://registry.npmjs.org/simple-swizzle 13ms (cache hit)
+npm http cache https://registry.npmjs.org/is-arrayish 7ms (cache hit)
+npm http cache https://registry.npmjs.org/get-source 6ms (cache hit)
+npm http cache https://registry.npmjs.org/as-table 9ms (cache hit)
+npm http cache https://registry.npmjs.org/printable-characters 7ms (cache hit)
+npm http cache https://registry.npmjs.org/source-map 9ms (cache hit)
+npm http cache https://registry.npmjs.org/data-uri-to-buffer 14ms (cache hit)
+npm http cache source-map@https://registry.npmjs.org/source-map/-/source-map-0.6.1.tgz 0ms (cache hit)
+npm http cache data-uri-to-buffer@https://registry.npmjs.org/data-uri-to-buffer/-/data-uri-to-buffer-2.0.2.tgz 0ms (cache hit)
+npm http cache get-source@https://registry.npmjs.org/get-source/-/get-source-2.0.12.tgz 0ms (cache hit)
+npm http cache as-table@https://registry.npmjs.org/as-table/-/as-table-1.0.55.tgz 0ms (cache hit)
+npm http cache printable-characters@https://registry.npmjs.org/printable-characters/-/printable-characters-1.0.42.tgz 0ms (cache hit)
+npm http cache mustache@https://registry.npmjs.org/mustache/-/mustache-4.2.0.tgz 0ms (cache hit)
+npm http cache stacktracey@https://registry.npmjs.org/stacktracey/-/stacktracey-2.1.8.tgz 0ms (cache hit)
+npm http cache ufo@https://registry.npmjs.org/ufo/-/ufo-1.6.1.tgz 0ms (cache hit)
+npm http cache @cloudflare/workerd-windows-64@https://registry.npmjs.org/@cloudflare/workerd-windows-64/-/workerd-windows-64-1.20250718.0.tgz 0ms (cache hit)
+npm http cache defu@https://registry.npmjs.org/defu/-/defu-6.1.4.tgz 0ms (cache hit)
+npm http cache ohash@https://registry.npmjs.org/ohash/-/ohash-2.0.11.tgz 0ms (cache hit)
+npm http cache exsolve@https://registry.npmjs.org/exsolve/-/exsolve-1.0.8.tgz 0ms (cache hit)
+npm http cache pathe@https://registry.npmjs.org/pathe/-/pathe-2.0.3.tgz 0ms (cache hit)
+npm http cache cookie@https://registry.npmjs.org/cookie/-/cookie-0.7.2.tgz 0ms (cache hit)
+npm http cache @fastify/busboy@https://registry.npmjs.org/@fastify/busboy/-/busboy-2.1.1.tgz 0ms (cache hit)
+npm http cache is-arrayish@https://registry.npmjs.org/is-arrayish/-/is-arrayish-0.3.4.tgz 0ms (cache hit)
+npm http cache color-name@https://registry.npmjs.org/color-name/-/color-name-1.1.4.tgz 0ms (cache hit)
+npm http cache color-string@https://registry.npmjs.org/color-string/-/color-string-1.9.1.tgz 0ms (cache hit)
+npm http cache simple-swizzle@https://registry.npmjs.org/simple-swizzle/-/simple-swizzle-0.2.4.tgz 0ms (cache hit)
+npm http cache semver@https://registry.npmjs.org/semver/-/semver-7.7.3.tgz 0ms (cache hit)
+npm http cache color-convert@https://registry.npmjs.org/color-convert/-/color-convert-2.0.1.tgz 0ms (cache hit)
+npm http cache color@https://registry.npmjs.org/color/-/color-4.2.3.tgz 0ms (cache hit)
+npm http cache detect-libc@https://registry.npmjs.org/detect-libc/-/detect-libc-2.1.2.tgz 0ms (cache hit)
+npm http cache @img/sharp-win32-x64@https://registry.npmjs.org/@img/sharp-win32-x64/-/sharp-win32-x64-0.33.5.tgz 0ms (cache hit)
+npm http cache sourcemap-codec@https://registry.npmjs.org/sourcemap-codec/-/sourcemap-codec-1.4.8.tgz 0ms (cache hit)
+npm http cache magic-string@https://registry.npmjs.org/magic-string/-/magic-string-0.25.9.tgz 0ms (cache hit)
+npm http cache rollup-plugin-inject@https://registry.npmjs.org/rollup-plugin-inject/-/rollup-plugin-inject-3.0.2.tgz 0ms (cache hit)
+npm http cache @jridgewell/sourcemap-codec@https://registry.npmjs.org/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.5.5.tgz 0ms (cache hit)
+npm http cache estree-walker@https://registry.npmjs.org/estree-walker/-/estree-walker-0.6.1.tgz 0ms (cache hit)
+npm http cache rollup-pluginutils@https://registry.npmjs.org/rollup-pluginutils/-/rollup-pluginutils-2.8.2.tgz 0ms (cache hit)
+npm http cache @jridgewell/trace-mapping@https://registry.npmjs.org/@jridgewell/trace-mapping/-/trace-mapping-0.3.9.tgz 0ms (cache hit)
+npm http cache youch@https://registry.npmjs.org/youch/-/youch-3.3.4.tgz 0ms (cache hit)
+npm http cache @jridgewell/resolve-uri@https://registry.npmjs.org/@jridgewell/resolve-uri/-/resolve-uri-3.1.2.tgz 0ms (cache hit)
+npm http cache zod@https://registry.npmjs.org/zod/-/zod-3.22.3.tgz 0ms (cache hit)
+npm http cache undici@https://registry.npmjs.org/undici/-/undici-5.29.0.tgz 0ms (cache hit)
+npm http cache stoppable@https://registry.npmjs.org/stoppable/-/stoppable-1.1.0.tgz 0ms (cache hit)
+npm http cache glob-to-regexp@https://registry.npmjs.org/glob-to-regexp/-/glob-to-regexp-0.4.1.tgz 0ms (cache hit)
+npm http cache exit-hook@https://registry.npmjs.org/exit-hook/-/exit-hook-2.2.1.tgz 0ms (cache hit)
+npm http cache acorn-walk@https://registry.npmjs.org/acorn-walk/-/acorn-walk-8.3.2.tgz 0ms (cache hit)
+npm http cache ws@https://registry.npmjs.org/ws/-/ws-8.18.0.tgz 0ms (cache hit)
+npm http cache acorn@https://registry.npmjs.org/acorn/-/acorn-8.14.0.tgz 0ms (cache hit)
+npm http cache @cspotcode/source-map-support@https://registry.npmjs.org/@cspotcode/source-map-support/-/source-map-support-0.8.1.tgz 0ms (cache hit)
+npm http cache @esbuild/win32-x64@https://registry.npmjs.org/@esbuild/win32-x64/-/win32-x64-0.17.19.tgz 0ms (cache hit)
+npm http cache rollup-plugin-node-polyfills@https://registry.npmjs.org/rollup-plugin-node-polyfills/-/rollup-plugin-node-polyfills-0.2.1.tgz 0ms (cache hit)
+npm http cache escape-string-regexp@https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz 0ms (cache hit)
+npm http cache mime@https://registry.npmjs.org/mime/-/mime-3.0.0.tgz 0ms (cache hit)
+npm http cache path-to-regexp@https://registry.npmjs.org/path-to-regexp/-/path-to-regexp-6.3.0.tgz 0ms (cache hit)
+npm http cache miniflare@https://registry.npmjs.org/miniflare/-/miniflare-3.20250718.2.tgz 0ms (cache hit)
+npm http cache sharp@https://registry.npmjs.org/sharp/-/sharp-0.33.5.tgz 0ms (cache hit)
+npm http cache workerd@https://registry.npmjs.org/workerd/-/workerd-1.20250718.0.tgz 0ms (cache hit)
+npm http cache esbuild@https://registry.npmjs.org/esbuild/-/esbuild-0.17.19.tgz 0ms (cache hit)
+npm http cache @esbuild-plugins/node-modules-polyfill@https://registry.npmjs.org/@esbuild-plugins/node-modules-polyfill/-/node-modules-polyfill-0.2.2.tgz 0ms (cache hit)
+npm http cache @esbuild-plugins/node-globals-polyfill@https://registry.npmjs.org/@esbuild-plugins/node-globals-polyfill/-/node-globals-polyfill-0.2.3.tgz 0ms (cache hit)
+npm http cache blake3-wasm@https://registry.npmjs.org/blake3-wasm/-/blake3-wasm-2.1.5.tgz 0ms (cache hit)
+npm http cache @cloudflare/kv-asset-handler@https://registry.npmjs.org/@cloudflare/kv-asset-handler/-/kv-asset-handler-0.3.4.tgz 0ms (cache hit)
+npm http cache unenv@https://registry.npmjs.org/unenv/-/unenv-2.0.0-rc.14.tgz 0ms (cache hit)
+npm http cache wrangler@https://registry.npmjs.org/wrangler/-/wrangler-3.114.15.tgz 0ms (cache hit)
+npm http cache partyserver@https://registry.npmjs.org/partyserver/-/partyserver-0.0.66.tgz 0ms (cache hit)
+npm http cache nanoid@https://registry.npmjs.org/nanoid/-/nanoid-5.1.6.tgz 0ms (cache hit)
+npm http cache @cloudflare/unenv-preset@https://registry.npmjs.org/@cloudflare/unenv-preset/-/unenv-preset-2.0.2.tgz 0ms (cache hit)
+npm http cache @cloudflare/workers-types@https://registry.npmjs.org/@cloudflare/workers-types/-/workers-types-4.20251205.0.tgz 0ms (cache hit)
+npm http cache typescript@https://registry.npmjs.org/typescript/-/typescript-5.9.3.tgz 0ms (cache hit)
+npm warn deprecated rollup-plugin-inject@3.0.2: This package has been deprecated and is no longer maintained. Please use @rollup/plugin-inject.
+npm warn deprecated sourcemap-codec@1.4.8: Please use @jridgewell/sourcemap-codec instead
+npm http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 1000ms
+npm http cache https://registry.npmjs.org/esbuild 40ms (cache hit)
+npm http cache https://registry.npmjs.org/@esbuild-plugins%2fnode-globals-polyfill 41ms (cache hit)
+npm http cache https://registry.npmjs.org/@esbuild-plugins%2fnode-modules-polyfill 48ms (cache hit)
+npm http cache https://registry.npmjs.org/wrangler 91ms (cache hit)
+npm info run sharp@0.33.5 install node_modules/sharp node install/check
+npm info run sharp@0.33.5 install { code: 1, signal: null }
+npm verbose reify failed optional dependency C:\Users\Destiny\Desktop\ai-architect-mmorpg\copy-of-rsc-evolution-ai\rsc-cloudflare\party-worker\node_modules\sharp
+npm verbose reify failed optional dependency C:\Users\Destiny\Desktop\ai-architect-mmorpg\copy-of-rsc-evolution-ai\rsc-cloudflare\party-worker\node_modules\color
+npm verbose reify failed optional dependency C:\Users\Destiny\Desktop\ai-architect-mmorpg\copy-of-rsc-evolution-ai\rsc-cloudflare\party-worker\node_modules\semver
+npm verbose reify failed optional dependency C:\Users\Destiny\Desktop\ai-architect-mmorpg\copy-of-rsc-evolution-ai\rsc-cloudflare\party-worker\node_modules\detect-libc
+npm verbose reify failed optional dependency C:\Users\Destiny\Desktop\ai-architect-mmorpg\copy-of-rsc-evolution-ai\rsc-cloudflare\party-worker\node_modules\@img\sharp-wasm32
+npm verbose reify failed optional dependency C:\Users\Destiny\Desktop\ai-architect-mmorpg\copy-of-rsc-evolution-ai\rsc-cloudflare\party-worker\node_modules\@img\sharp-linux-arm
+npm verbose reify failed optional dependency C:\Users\Destiny\Desktop\ai-architect-mmorpg\copy-of-rsc-evolution-ai\rsc-cloudflare\party-worker\node_modules\@img\sharp-linux-x64
+npm verbose reify failed optional dependency C:\Users\Destiny\Desktop\ai-architect-mmorpg\copy-of-rsc-evolution-ai\rsc-cloudflare\party-worker\node_modules\@img\sharp-win32-x64
+npm verbose reify failed optional dependency C:\Users\Destiny\Desktop\ai-architect-mmorpg\copy-of-rsc-evolution-ai\rsc-cloudflare\party-worker\node_modules\@img\sharp-darwin-x64
+npm verbose reify failed optional dependency C:\Users\Destiny\Desktop\ai-architect-mmorpg\copy-of-rsc-evolution-ai\rsc-cloudflare\party-worker\node_modules\@img\sharp-win32-ia32
+npm verbose reify failed optional dependency C:\Users\Destiny\Desktop\ai-architect-mmorpg\copy-of-rsc-evolution-ai\rsc-cloudflare\party-worker\node_modules\@img\sharp-linux-arm64
+npm verbose reify failed optional dependency C:\Users\Destiny\Desktop\ai-architect-mmorpg\copy-of-rsc-evolution-ai\rsc-cloudflare\party-worker\node_modules\@img\sharp-linux-s390x
+npm verbose reify failed optional dependency C:\Users\Destiny\Desktop\ai-architect-mmorpg\copy-of-rsc-evolution-ai\rsc-cloudflare\party-worker\node_modules\@img\sharp-darwin-arm64
+npm verbose reify failed optional dependency C:\Users\Destiny\Desktop\ai-architect-mmorpg\copy-of-rsc-evolution-ai\rsc-cloudflare\party-worker\node_modules\@img\sharp-linuxmusl-x64
+npm verbose reify failed optional dependency C:\Users\Destiny\Desktop\ai-architect-mmorpg\copy-of-rsc-evolution-ai\rsc-cloudflare\party-worker\node_modules\@img\sharp-linuxmusl-arm64
+npm verbose reify failed optional dependency C:\Users\Destiny\Desktop\ai-architect-mmorpg\copy-of-rsc-evolution-ai\rsc-cloudflare\party-worker\node_modules\@img\sharp-libvips-linux-arm
+npm verbose reify failed optional dependency C:\Users\Destiny\Desktop\ai-architect-mmorpg\copy-of-rsc-evolution-ai\rsc-cloudflare\party-worker\node_modules\@img\sharp-libvips-linux-x64
+npm verbose reify failed optional dependency C:\Users\Destiny\Desktop\ai-architect-mmorpg\copy-of-rsc-evolution-ai\rsc-cloudflare\party-worker\node_modules\@img\sharp-libvips-darwin-x64
+npm verbose reify failed optional dependency C:\Users\Destiny\Desktop\ai-architect-mmorpg\copy-of-rsc-evolution-ai\rsc-cloudflare\party-worker\node_modules\@img\sharp-libvips-linux-arm64
+npm verbose reify failed optional dependency C:\Users\Destiny\Desktop\ai-architect-mmorpg\copy-of-rsc-evolution-ai\rsc-cloudflare\party-worker\node_modules\@img\sharp-libvips-linux-s390x
+npm verbose reify failed optional dependency C:\Users\Destiny\Desktop\ai-architect-mmorpg\copy-of-rsc-evolution-ai\rsc-cloudflare\party-worker\node_modules\@img\sharp-libvips-darwin-arm64
+npm verbose reify failed optional dependency C:\Users\Destiny\Desktop\ai-architect-mmorpg\copy-of-rsc-evolution-ai\rsc-cloudflare\party-worker\node_modules\@img\sharp-libvips-linuxmusl-x64
+npm verbose reify failed optional dependency C:\Users\Destiny\Desktop\ai-architect-mmorpg\copy-of-rsc-evolution-ai\rsc-cloudflare\party-worker\node_modules\@img\sharp-libvips-linuxmusl-arm64
+npm verbose reify failed optional dependency C:\Users\Destiny\Desktop\ai-architect-mmorpg\copy-of-rsc-evolution-ai\rsc-cloudflare\party-worker\node_modules\color-string
+npm verbose reify failed optional dependency C:\Users\Destiny\Desktop\ai-architect-mmorpg\copy-of-rsc-evolution-ai\rsc-cloudflare\party-worker\node_modules\color-convert
+npm verbose reify failed optional dependency C:\Users\Destiny\Desktop\ai-architect-mmorpg\copy-of-rsc-evolution-ai\rsc-cloudflare\party-worker\node_modules\@emnapi\runtime
+npm verbose reify failed optional dependency C:\Users\Destiny\Desktop\ai-architect-mmorpg\copy-of-rsc-evolution-ai\rsc-cloudflare\party-worker\node_modules\color-name
+npm verbose reify failed optional dependency C:\Users\Destiny\Desktop\ai-architect-mmorpg\copy-of-rsc-evolution-ai\rsc-cloudflare\party-worker\node_modules\simple-swizzle
+npm verbose reify failed optional dependency C:\Users\Destiny\Desktop\ai-architect-mmorpg\copy-of-rsc-evolution-ai\rsc-cloudflare\party-worker\node_modules\tslib
+npm verbose reify failed optional dependency C:\Users\Destiny\Desktop\ai-architect-mmorpg\copy-of-rsc-evolution-ai\rsc-cloudflare\party-worker\node_modules\is-arrayish
+npm info run esbuild@0.17.19 postinstall node_modules/esbuild node install.js
+npm info run workerd@1.20250718.0 postinstall node_modules/workerd node install.js
+npm info run esbuild@0.17.19 postinstall { code: 1, signal: null }
+npm info run workerd@1.20250718.0 postinstall { code: 1, signal: null }
+npm warn cleanup Failed to remove some directories [
+npm warn cleanup   [
+npm warn cleanup     'C:\\Users\\Destiny\\Desktop\\ai-architect-mmorpg\\copy-of-rsc-evolution-ai\\rsc-cloudflare\\party-worker\\node_modules\\workerd',
+npm warn cleanup     [Error: EBUSY: resource busy or locked, rmdir 'C:\Users\Destiny\Desktop\ai-architect-mmorpg\copy-of-rsc-evolution-ai\rsc-cloudflare\party-worker\node_modules\workerd'] {
+npm warn cleanup       errno: -4082,
+npm warn cleanup       code: 'EBUSY',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: 'C:\\Users\\Destiny\\Desktop\\ai-architect-mmorpg\\copy-of-rsc-evolution-ai\\rsc-cloudflare\\party-worker\\node_modules\\workerd'
+npm warn cleanup     }
+npm warn cleanup   ],
+npm warn cleanup   [
+npm warn cleanup     'C:\\Users\\Destiny\\Desktop\\ai-architect-mmorpg\\copy-of-rsc-evolution-ai\\rsc-cloudflare\\party-worker\\node_modules',
+npm warn cleanup     [Error: ENOTEMPTY: directory not empty, rmdir 'C:\Users\Destiny\Desktop\ai-architect-mmorpg\copy-of-rsc-evolution-ai\rsc-cloudflare\party-worker\node_modules\@cloudflare\workerd-windows-64\bin'] {
+npm warn cleanup       errno: -4051,
+npm warn cleanup       code: 'ENOTEMPTY',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: 'C:\\Users\\Destiny\\Desktop\\ai-architect-mmorpg\\copy-of-rsc-evolution-ai\\rsc-cloudflare\\party-worker\\node_modules\\@cloudflare\\workerd-windows-64\\bin'
+npm warn cleanup     }
+npm warn cleanup   ]
+npm warn cleanup ]
+npm verbose stack Error: command failed
+npm verbose stack     at promiseSpawn (C:\Users\Destiny\AppData\Roaming\npm\node_modules\npm\node_modules\@npmcli\promise-spawn\lib\index.js:22:22)
+npm verbose stack     at spawnWithShell (C:\Users\Destiny\AppData\Roaming\npm\node_modules\npm\node_modules\@npmcli\promise-spawn\lib\index.js:124:10)
+npm verbose stack     at promiseSpawn (C:\Users\Destiny\AppData\Roaming\npm\node_modules\npm\node_modules\@npmcli\promise-spawn\lib\index.js:12:12)
+npm verbose stack     at runScriptPkg (C:\Users\Destiny\AppData\Roaming\npm\node_modules\npm\node_modules\@npmcli\run-script\lib\run-script-pkg.js:79:13)
+npm verbose stack     at runScript (C:\Users\Destiny\AppData\Roaming\npm\node_modules\npm\node_modules\@npmcli\run-script\lib\run-script.js:9:12)
+npm verbose stack     at C:\Users\Destiny\AppData\Roaming\npm\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\rebuild.js:332:17
+npm verbose stack     at run (C:\Users\Destiny\AppData\Roaming\npm\node_modules\npm\node_modules\promise-call-limit\dist\commonjs\index.js:67:22)
+npm verbose stack     at C:\Users\Destiny\AppData\Roaming\npm\node_modules\npm\node_modules\promise-call-limit\dist\commonjs\index.js:84:9
+npm verbose stack     at new Promise (<anonymous>)
+npm verbose stack     at callLimit (C:\Users\Destiny\AppData\Roaming\npm\node_modules\npm\node_modules\promise-call-limit\dist\commonjs\index.js:35:69)
+npm verbose pkgid esbuild@0.17.19
+npm error code 1
+npm error path C:\Users\Destiny\Desktop\ai-architect-mmorpg\copy-of-rsc-evolution-ai\rsc-cloudflare\party-worker\node_modules\esbuild
+npm error command failed
+npm error command C:\WINDOWS\system32\cmd.exe /d /s /c node install.js
+npm error 'node' is not recognized as an internal or external command,
+npm error operable program or batch file.
+npm verbose cwd C:\Users\Destiny\Desktop\ai-architect-mmorpg\copy-of-rsc-evolution-ai\rsc-cloudflare\party-worker
+npm verbose os Windows_NT 10.0.26100
+npm verbose node v20.18.0
+npm verbose npm  v11.6.2
+npm verbose exit 1
+npm verbose code 1
+npm error A complete log of this run can be found in: C:\Users\Destiny\AppData\Local\npm-cache\_logs\2025-12-05T04_03_51_436Z-debug-0.log

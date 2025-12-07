@@ -1,0 +1,11 @@
+SyntaxError: Unexpected token (655:50) while parsing file: C:\Users\Destiny\Desktop\ai-architect-mmorpg\copy-of-rsc-evolution-ai\rsc-cloudflare\rsc-client\src\mudclient.js
+    at pp$4.raise (C:\Users\Destiny\Desktop\ai-architect-mmorpg\copy-of-rsc-evolution-ai\rsc-cloudflare\rsc-client\node_modules\acorn\dist\acorn.js:2927:15)
+    at pp.unexpected (C:\Users\Destiny\Desktop\ai-architect-mmorpg\copy-of-rsc-evolution-ai\rsc-cloudflare\rsc-client\node_modules\acorn\dist\acorn.js:698:10)
+    at pp.semicolon (C:\Users\Destiny\Desktop\ai-architect-mmorpg\copy-of-rsc-evolution-ai\rsc-cloudflare\rsc-client\node_modules\acorn\dist\acorn.js:675:66)
+    at pp$1.parseExpressionStatement (C:\Users\Destiny\Desktop\ai-architect-mmorpg\copy-of-rsc-evolution-ai\rsc-cloudflare\rsc-client\node_modules\acorn\dist\acorn.js:1154:10)
+    at pp$1.parseStatement (C:\Users\Destiny\Desktop\ai-architect-mmorpg\copy-of-rsc-evolution-ai\rsc-cloudflare\rsc-client\node_modules\acorn\dist\acorn.js:889:26)
+    at pp$1.parseTopLevel (C:\Users\Destiny\Desktop\ai-architect-mmorpg\copy-of-rsc-evolution-ai\rsc-cloudflare\rsc-client\node_modules\acorn\dist\acorn.js:755:23)
+    at Parser.parse (C:\Users\Destiny\Desktop\ai-architect-mmorpg\copy-of-rsc-evolution-ai\rsc-cloudflare\rsc-client\node_modules\acorn\dist\acorn.js:555:17)
+    at Function.parse (C:\Users\Destiny\Desktop\ai-architect-mmorpg\copy-of-rsc-evolution-ai\rsc-cloudflare\rsc-client\node_modules\acorn\dist\acorn.js:578:37)
+    at Object.parse (C:\Users\Destiny\Desktop\ai-architect-mmorpg\copy-of-rsc-evolution-ai\rsc-cloudflare\rsc-client\node_modules\acorn\dist\acorn.js:5143:19)
+    at module.exports (C:\Users\Destiny\Desktop\ai-architect-mmorpg\copy-of-rsc-evolution-ai\rsc-cloudflare\rsc-client\node_modules\falafel\index.js:23:22)

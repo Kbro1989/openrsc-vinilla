@@ -1,0 +1,17 @@
+
+ Γ¢à∩╕Å wrangler 4.47.0 (update available 4.53.0)
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+Total Upload: 20.58 KiB / gzip: 5.51 KiB
+Your Worker has access to the following bindings:
+Binding                        Resource            
+env.RSC_PARTY (RSCServer)      Durable Object      
+
+
+X [ERROR] A request to the Cloudflare API (/accounts/b8d84044e6e3befa2f5e5bddbfe34ffe/workers/scripts/rsc-party-worker) failed.
+
+  In order to use Durable Objects with a free plan, you must create a namespace using a `new_sqlite_classes` migration. [code: 10097]
+  
+  If you think this is a bug, please open an issue at: https://github.com/cloudflare/workers-sdk/issues/new/choose
+
+
+≡ƒ¬╡  Logs were written to "C:\Users\Destiny\.wrangler\logs\wrangler-2025-12-05_04-05-41_691.log"

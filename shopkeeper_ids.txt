@@ -1,0 +1,28 @@
+NPC: "Shop Assistant" (ID: 82) - Maybe he'd like to buy some of my junk
+NPC: "Shop Assistant" (ID: 83) - Maybe he'd like to buy some of my junk
+NPC: "Zeke" (ID: 84) - He sells Scimitars
+NPC: "Shop Assistant" (ID: 88) - Maybe she'd like to buy some of my junk
+NPC: "Cassie" (ID: 101) - She sells shields
+NPC: "Shop Assistant" (ID: 106) - Maybe he'd like to buy some of my junk
+NPC: "Flynn" (ID: 115) - The mace salesman
+NPC: "shop assistant" (ID: 130) - I can buy swords off him
+NPC: "Brian" (ID: 131) - An axe seller
+NPC: "Shop Assistant" (ID: 146) - Maybe he'd like to buy some of my junk
+NPC: "Rommik" (ID: 156) - The owner of the crafting shop
+NPC: "Shop Assistant" (ID: 169) - Maybe he'd like to buy some of my junk
+NPC: "Dommik" (ID: 173) - The owner of the crafting shop
+NPC: "Shop Assistant" (ID: 186) - Maybe he'd like to buy some of my junk
+NPC: "Fairy Shop Assistant" (ID: 223) - Maybe he'd like to buy some of my junk
+NPC: "Harry" (ID: 250) - I wonder what he's got for sale
+NPC: "Alfonse the waiter" (ID: 260) - He should get a clean apron
+NPC: "Davon" (ID: 278) - An amulet trader
+NPC: "Arhein" (ID: 280) - A merchant
+NPC: "gem trader" (ID: 308) - He sells gems
+NPC: "Baker" (ID: 325) - He sells hot baked bread
+NPC: "Fur trader" (ID: 327) - A buyer and seller of animal furs
+NPC: "silver merchant" (ID: 328) - He deals in silver
+NPC: "spice merchant" (ID: 329) - He sells exotic spices
+NPC: "gem merchant" (ID: 330) - He sells gems
+NPC: "Doctor orbon" (ID: 435) - A local doctor
+NPC: "shop keeper" (ID: 528) - he sells weapons
+NPC: "Gunnjorn" (ID: 588) - Not civilised looking

@@ -1,0 +1,300 @@
+{
+    "cutting": {
+        "157": {
+            "level": 43,
+            "experience": 107.5,
+            "id": 161,
+            "alias": "diamonds"
+        },
+        "158": {
+            "level": 34,
+            "experience": 85,
+            "id": 162,
+            "alias": "rubies"
+        },
+        "159": {
+            "level": 27,
+            "experience": 67.5,
+            "id": 163,
+            "alias": "emeralds"
+        },
+        "160": {
+            "level": 20,
+            "experience": 50,
+            "id": 164,
+            "alias": "sapphires"
+        },
+        "542": {
+            "level": 55,
+            "experience": 137.5,
+            "id": 523,
+            "alias": "dragonstones"
+        },
+        "889": {
+            "level": 16,
+            "experience": 25,
+            "id": 892
+        },
+        "890": {
+            "level": 13,
+            "experience": 20,
+            "id": 893
+        },
+        "891": {
+            "level": 10,
+            "experience": 15,
+            "id": 894
+        }
+    },
+    "leather": [
+        {
+            "level": 14,
+            "experience": 25,
+            "id": 15,
+            "alias": "Armour"
+        },
+        {
+            "level": 1,
+            "experience": 13.75,
+            "id": 16,
+            "alias": "Gloves"
+        },
+        {
+            "level": 7,
+            "experience": 16.25,
+            "id": 17,
+            "alias": "Boots"
+        }
+    ],
+    "pottery": [
+        {
+            "level": 4,
+            "unfired": {
+                "id": 278,
+                "experience": 15
+            },
+            "fired": {
+                "id": 251,
+                "experience": 10
+            },
+            "roll": [
+                164,
+                1024
+            ],
+            "alias": "pie dishes"
+        },
+        {
+            "level": 1,
+            "unfired": {
+                "id": 279,
+                "experience": 6.25
+            },
+            "fired": {
+                "id": 135,
+                "experience": 6.25
+            },
+            "roll": [
+                192,
+                1096
+            ],
+            "alias": "a pot"
+        },
+        {
+            "level": 7,
+            "unfired": {
+                "id": 340,
+                "experience": 10
+            },
+            "fired": {
+                "id": 341,
+                "experience": 15
+            },
+            "roll": [
+                144,
+                924
+            ],
+            "alias": "a bowl"
+        }
+    ],
+    "silver-jewellery": {
+        "moulds": [
+            386,
+            1026
+        ],
+        "items": [
+            {
+                "level": 16,
+                "experience": 50,
+                "id": 44,
+                "alias": "Holy Symbol of Saradomin"
+            },
+            {
+                "level": 16,
+                "experience": 50,
+                "id": 1027
+            }
+        ]
+    },
+    "gold-jewellery": {
+        "moulds": [
+            293,
+            295,
+            294
+        ],
+        "gems": [
+            164,
+            163,
+            162,
+            161,
+            523
+        ],
+        "items": [
+            [
+                {
+                    "level": 5,
+                    "experience": 15,
+                    "id": 283
+                },
+                {
+                    "level": 8,
+                    "experience": 40,
+                    "id": 284
+                },
+                {
+                    "level": 18,
+                    "experience": 55,
+                    "id": 285
+                },
+                {
+                    "level": 30,
+                    "experience": 70,
+                    "id": 286
+                },
+                {
+                    "level": 42,
+                    "experience": 85,
+                    "id": 287
+                },
+                {
+                    "level": 54,
+                    "experience": 100,
+                    "id": 543
+                }
+            ],
+            [
+                {
+                    "level": 6,
+                    "experience": 20,
+                    "id": 288
+                },
+                {
+                    "level": 10,
+                    "experience": 40,
+                    "id": 289
+                },
+                {
+                    "level": 24,
+                    "experience": 60,
+                    "id": 290
+                },
+                {
+                    "level": 40,
+                    "experience": 75,
+                    "id": 291
+                },
+                {
+                    "level": 56,
+                    "experience": 90,
+                    "id": 292
+                },
+                {
+                    "level": 72,
+                    "experience": 105,
+                    "id": 544
+                }
+            ],
+            [
+                {
+                    "level": 8,
+                    "experience": 30,
+                    "id": 296
+                },
+                {
+                    "level": 13,
+                    "experience": 65,
+                    "id": 297
+                },
+                {
+                    "level": 30,
+                    "experience": 70,
+                    "id": 298
+                },
+                {
+                    "level": 50,
+                    "experience": 85,
+                    "id": 299
+                },
+                {
+                    "level": 70,
+                    "experience": 100,
+                    "id": 300
+                },
+                {
+                    "level": 80,
+                    "experience": 150,
+                    "id": 524
+                }
+            ]
+        ]
+    },
+    "stringing": {
+        "44": 45,
+        "296": 301,
+        "297": 302,
+        "298": 303,
+        "299": 304,
+        "300": 305,
+        "524": 522,
+        "1027": 1028
+    },
+    "glassblowing": [
+        {
+            "level": 33,
+            "experience": 35,
+            "id": 465
+        },
+        {
+            "level": 46,
+            "experience": 52.5,
+            "id": 611,
+            "alias": "orb"
+        },
+        {
+            "level": 1,
+            "experience": 17.5,
+            "id": 620
+        }
+    ],
+    "battlestaves": {
+        "612": {
+            "level": 62,
+            "experience": 125,
+            "id": 615
+        },
+        "613": {
+            "level": 54,
+            "experience": 100,
+            "id": 616
+        },
+        "626": {
+            "level": 66,
+            "experience": 137.5,
+            "id": 617
+        },
+        "627": {
+            "level": 58,
+            "experience": 112.5,
+            "id": 618
+        }
+    }
+}

@@ -1,0 +1,22 @@
+name = "rsc-server-do"
+main = "rsc-server-do-worker.js"
+compatibility_date = "2024-11-28"
+
+# Durable Objects
+[durable_objects]
+bindings = [
+    { name = "GAME_WORLD", class_name = "GameWorld" }
+]
+
+[[migrations]]
+tag = "v1"
+new_classes = ["GameWorld"]
+
+# KV Namespaces (for player data)
+[[kv_namespaces]]
+binding = "PLAYERS_KV"
+id = "f2881801ac59415a86236d0841f27103"
+
+# Environment Variables
+[vars]
+MEMBERS = "true"

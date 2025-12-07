@@ -1,0 +1,32 @@
+[
+  {
+    "id": "a78ab1dfbb6742a9bd341674242d27f8",
+    "title": "architect-asset-kv",
+    "supports_url_encoding": true
+  },
+  {
+    "id": "b71578ebdef34c4896a9ed49d116f1be",
+    "title": "architect-cache",
+    "supports_url_encoding": true
+  },
+  {
+    "id": "d5ed7ba1069e4a1b95b325dac160220d",
+    "title": "architect-ratelimit",
+    "supports_url_encoding": true
+  },
+  {
+    "id": "40222b350e384cb3bd0f5883b7dd32c7",
+    "title": "AUTH_STORAGE",
+    "supports_url_encoding": true
+  },
+  {
+    "id": "1b9446bc9f4e4e9bb3c5d79612c25ebd",
+    "title": "OpenAuth Server",
+    "supports_url_encoding": true
+  },
+  {
+    "id": "88142cf6969b4547ab17f2d97f6249a1",
+    "title": "rsc-server-do-RSC_KV",
+    "supports_url_encoding": true
+  }
+]

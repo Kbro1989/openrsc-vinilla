@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "partyserver": "^0.0.75",
+    "partysocket": "^1.1.6",
+    "wrangler": "^4.53.0"
+  }
+}

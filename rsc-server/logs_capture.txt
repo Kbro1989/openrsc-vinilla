@@ -1,0 +1,370 @@
+[2m2025-12-05T02:05:14Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading net...
+[2m2025-12-05T02:05:14Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading ./packet-handlers...
+[2m2025-12-05T02:05:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading typedarray-to-buffer...
+[2m2025-12-05T02:05:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading ws...
+[2m2025-12-05T02:05:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading ./state-sync-client...
+[2m2025-12-05T02:05:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading ./fly-data-client...
+[2m2025-12-05T02:05:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading http...
+[2m2025-12-05T02:05:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading ../config.json...
+[2m2025-12-05T02:05:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]========================================
+[2m2025-12-05T02:05:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]🚀 Starting RSC Server on Fly.io
+[2m2025-12-05T02:05:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]========================================
+[2m2025-12-05T02:05:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]World ID: 1
+[2m2025-12-05T02:05:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Members: No (F2P only)
+[2m2025-12-05T02:05:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]WebSocket Port: 43594
+[2m2025-12-05T02:05:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]State Sync: 30s
+[2m2025-12-05T02:05:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]========================================
+[2m2025-12-05T02:05:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]FlyDataClient: Cloudflare KV mode {
+[2m2025-12-05T02:05:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]  accountId: '6872653edcee9c791787c1b783173793',
+[2m2025-12-05T02:05:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]  namespaceId: 'f2881801ac59415a86236d0841f27103',
+[2m2025-12-05T02:05:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]  hasToken: true
+[2m2025-12-05T02:05:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]}
+[2m2025-12-05T02:05:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]✅ FlyDataClient activated (Cloudflare KV for player data)
+[2m2025-12-05T02:05:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][StateSync] Initialized with interval: 30000ms
+[2m2025-12-05T02:05:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]✅ State sync to Cloudflare KV enabled
+[2m2025-12-05T02:05:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][StateSync] Started - syncing every 30 seconds
+[2m2025-12-05T02:05:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]========================================
+[2m2025-12-05T02:05:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]✅ RSC Server ready! Players can connect.
+[2m2025-12-05T02:05:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]========================================
+[2m2025-12-05T02:05:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]✅ Health check endpoint ready at /health
+[2m2025-12-05T02:05:55Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][StateSync] Syncing undefined player(s) to Cloudflare KV
+[2m2025-12-05T02:05:55Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]/usr/src/app/src/state-sync-client.js:72
+[2m2025-12-05T02:05:55Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]        const savePromises = players.map(player =>
+[2m2025-12-05T02:05:55Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]                                     ^
+[2m2025-12-05T02:05:55Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]TypeError: players.map is not a function
+[2m2025-12-05T02:05:55Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]    at StateSyncClient.syncAllPlayers (/usr/src/app/src/state-sync-client.js:72:38)
+[2m2025-12-05T02:05:55Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]    at Timeout._onTimeout (/usr/src/app/src/state-sync-client.js:38:18)
+[2m2025-12-05T02:05:55Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]    at listOnTimeout (node:internal/timers:569:17)
+[2m2025-12-05T02:05:55Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]    at process.processTimers (node:internal/timers:512:7)
+[2m2025-12-05T02:05:55Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Node.js v18.20.8
+[2merror.message=[0m"could not complete HTTP request to instance: connection error: Connection reset by peer (os error 104)" [2m2025-12-05T02:05:56Z[0m proxy[78171d2f90e618] [32mord[0m [[31merror[0m]
+[2m2025-12-05T02:05:56Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][32m INFO[0m Main child exited normally with code: 1
+[2m2025-12-05T02:05:56Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][32m INFO[0m Starting clean up.
+[2m2025-12-05T02:05:56Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][   53.992088] reboot: Restarting system
+[2m2025-12-05T02:06:00Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]2025-12-05T02:06:00.444779482 [01KBP340296NYGAW8J1H4TM6YA:main] Running Firecracker v1.12.1
+[2m2025-12-05T02:06:00Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]2025-12-05T02:06:00.444926013 [01KBP340296NYGAW8J1H4TM6YA:main] Listening on API socket ("/fc.sock").
+[2m2025-12-05T02:06:01Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][32m INFO[0m Starting init (commit: 6f59af0a)...
+[2m2025-12-05T02:06:02Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][32m INFO[0m Preparing to run: `docker-entrypoint.sh node src/fly-server.js` as root
+[2m2025-12-05T02:06:02Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][32m INFO[0m [fly api proxy] listening at /.fly/api
+[2m2025-12-05T02:06:02Z[0m runner[78171d2f90e618] [32mord[0m [[34minfo[0m]Machine started in 2.3s
+[2merror.message=[0m"could not find a good candidate within 1 attempts at load balancing. last error: [PC01] instance refused connection. is your app listening on 0.0.0.0:43594? make sure it is not only listening on 127.0.0.1 (hint: look at your startup logs, servers often print the address they are listening on)" [2m2025-12-05T02:06:03Z[0m proxy[78171d2f90e618] [32mord[0m [[31merror[0m][2mrequest.url=[0m"/" 
+[2m2025-12-05T02:06:06Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading ./server...
+[2m2025-12-05T02:06:06Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading ./browser-socket...
+[2m2025-12-05T02:06:07Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading data-client...
+[2m2025-12-05T02:06:07Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]2025/12/05 02:06:07 INFO SSH listening listen_address=[fdaa:37:c0d0:a7b:56a:a92d:bb6d:2]:22
+[2m2025-12-05T02:06:07Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading @2003scape/rsc-socket...
+[2m2025-12-05T02:06:08Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading ./model/world...
+[2m2025-12-05T02:06:14Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading bole...
+[2m2025-12-05T02:06:14Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading net...
+[2m2025-12-05T02:06:14Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading ./packet-handlers...
+[2m2025-12-05T02:06:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading typedarray-to-buffer...
+[2m2025-12-05T02:06:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading ws...
+[2m2025-12-05T02:06:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading ./state-sync-client...
+[2m2025-12-05T02:06:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading ./fly-data-client...
+[2m2025-12-05T02:06:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading http...
+[2m2025-12-05T02:06:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading ../config.json...
+[2m2025-12-05T02:06:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]========================================
+[2m2025-12-05T02:06:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]🚀 Starting RSC Server on Fly.io
+[2m2025-12-05T02:06:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]========================================
+[2m2025-12-05T02:06:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]World ID: 1
+[2m2025-12-05T02:06:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Members: No (F2P only)
+[2m2025-12-05T02:06:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]WebSocket Port: 43594
+[2m2025-12-05T02:06:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]State Sync: 30s
+[2m2025-12-05T02:06:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]========================================
+[2m2025-12-05T02:06:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]FlyDataClient: Cloudflare KV mode {
+[2m2025-12-05T02:06:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]  accountId: '6872653edcee9c791787c1b783173793',
+[2m2025-12-05T02:06:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]  namespaceId: 'f2881801ac59415a86236d0841f27103',
+[2m2025-12-05T02:06:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]  hasToken: true
+[2m2025-12-05T02:06:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]}
+[2m2025-12-05T02:06:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]✅ FlyDataClient activated (Cloudflare KV for player data)
+[2m2025-12-05T02:06:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][StateSync] Initialized with interval: 30000ms
+[2m2025-12-05T02:06:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]✅ State sync to Cloudflare KV enabled
+[2m2025-12-05T02:06:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][StateSync] Started - syncing every 30 seconds
+[2m2025-12-05T02:06:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]========================================
+[2m2025-12-05T02:06:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]✅ RSC Server ready! Players can connect.
+[2m2025-12-05T02:06:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]========================================
+[2m2025-12-05T02:06:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]✅ Health check endpoint ready at /health
+[2m2025-12-05T02:07:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][StateSync] Syncing undefined player(s) to Cloudflare KV
+[2m2025-12-05T02:07:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]/usr/src/app/src/state-sync-client.js:72
+[2m2025-12-05T02:07:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]        const savePromises = players.map(player =>
+[2m2025-12-05T02:07:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]                                     ^
+[2m2025-12-05T02:07:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]TypeError: players.map is not a function
+[2m2025-12-05T02:07:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]    at StateSyncClient.syncAllPlayers (/usr/src/app/src/state-sync-client.js:72:38)
+[2m2025-12-05T02:07:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]    at Timeout._onTimeout (/usr/src/app/src/state-sync-client.js:38:18)
+[2m2025-12-05T02:07:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]    at listOnTimeout (node:internal/timers:569:17)
+[2m2025-12-05T02:07:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]    at process.processTimers (node:internal/timers:512:7)
+[2m2025-12-05T02:07:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Node.js v18.20.8
+[2m2025-12-05T02:07:16Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][32m INFO[0m Main child exited normally with code: 1
+[2m2025-12-05T02:07:16Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][32m INFO[0m Starting clean up.
+[2m2025-12-05T02:07:16Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][   75.833510] reboot: Restarting system
+[2m2025-12-05T02:07:16Z[0m runner[78171d2f90e618] [32mord[0m [[34minfo[0m]machine has reached its max restart count of 10
+[2m2025-12-05T02:09:58Z[0m proxy[78171d2f90e618] [32mord[0m [[34minfo[0m]Starting machine
+[2m2025-12-05T02:09:58Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]2025-12-05T02:09:58.952552166 [01KBP340296NYGAW8J1H4TM6YA:main] Running Firecracker v1.12.1
+[2m2025-12-05T02:09:58Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]2025-12-05T02:09:58.952702166 [01KBP340296NYGAW8J1H4TM6YA:main] Listening on API socket ("/fc.sock").
+[2m2025-12-05T02:10:00Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][32m INFO[0m Starting init (commit: 6f59af0a)...
+[2m2025-12-05T02:10:00Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][32m INFO[0m Preparing to run: `docker-entrypoint.sh node src/fly-server.js` as root
+[2m2025-12-05T02:10:00Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][32m INFO[0m [fly api proxy] listening at /.fly/api
+[2m2025-12-05T02:10:00Z[0m runner[78171d2f90e618] [32mord[0m [[34minfo[0m]Machine started in 2.025s
+[2m2025-12-05T02:10:00Z[0m proxy[78171d2f90e618] [32mord[0m [[34minfo[0m]machine started in 2.175019656s
+[2m2025-12-05T02:10:04Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading ./server...
+[2m2025-12-05T02:10:04Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading ./browser-socket...
+[2m2025-12-05T02:10:04Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading data-client...
+[2m2025-12-05T02:10:05Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]2025/12/05 02:10:05 INFO SSH listening listen_address=[fdaa:37:c0d0:a7b:56a:a92d:bb6d:2]:22
+[2m2025-12-05T02:10:05Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading @2003scape/rsc-socket...
+[2m2025-12-05T02:10:05Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading ./model/world...
+[2m2025-12-05T02:10:06Z[0m proxy[78171d2f90e618] [32mord[0m [[34minfo[0m]waiting for machine to be reachable on 0.0.0.0:43594 (waited 5.654621906s so far)
+[2m2025-12-05T02:10:09Z[0m proxy[78171d2f90e618] [32mord[0m [[31merror[0m][PM05] failed to connect to machine: gave up after 15 attempts (in 8.814372004s)
+[2m2025-12-05T02:10:11Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading bole...
+[2m2025-12-05T02:10:11Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading net...
+[2m2025-12-05T02:10:11Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading ./packet-handlers...
+[2m2025-12-05T02:10:11Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading typedarray-to-buffer...
+[2m2025-12-05T02:10:11Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading ws...
+[2m2025-12-05T02:10:12Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading ./state-sync-client...
+[2m2025-12-05T02:10:12Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading ./fly-data-client...
+[2m2025-12-05T02:10:12Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading http...
+[2m2025-12-05T02:10:12Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading ../config.json...
+[2m2025-12-05T02:10:12Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]========================================
+[2m2025-12-05T02:10:12Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]🚀 Starting RSC Server on Fly.io
+[2m2025-12-05T02:10:12Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]========================================
+[2m2025-12-05T02:10:12Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]World ID: 1
+[2m2025-12-05T02:10:12Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Members: No (F2P only)
+[2m2025-12-05T02:10:12Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]WebSocket Port: 43594
+[2m2025-12-05T02:10:12Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]State Sync: 30s
+[2m2025-12-05T02:10:12Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]========================================
+[2m2025-12-05T02:10:12Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]FlyDataClient: Cloudflare KV mode {
+[2m2025-12-05T02:10:12Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]  accountId: '6872653edcee9c791787c1b783173793',
+[2m2025-12-05T02:10:12Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]  namespaceId: 'f2881801ac59415a86236d0841f27103',
+[2m2025-12-05T02:10:12Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]  hasToken: true
+[2m2025-12-05T02:10:12Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]}
+[2m2025-12-05T02:10:12Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]✅ FlyDataClient activated (Cloudflare KV for player data)
+[2m2025-12-05T02:10:12Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][StateSync] Initialized with interval: 30000ms
+[2m2025-12-05T02:10:12Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]✅ State sync to Cloudflare KV enabled
+[2m2025-12-05T02:10:12Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][StateSync] Started - syncing every 30 seconds
+[2m2025-12-05T02:10:12Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]========================================
+[2m2025-12-05T02:10:12Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]✅ RSC Server ready! Players can connect.
+[2m2025-12-05T02:10:12Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]========================================
+[2m2025-12-05T02:10:12Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]✅ Health check endpoint ready at /health
+[2m2025-12-05T02:11:02Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][StateSync] Syncing undefined player(s) to Cloudflare KV
+[2m2025-12-05T02:11:02Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]/usr/src/app/src/state-sync-client.js:72
+[2m2025-12-05T02:11:02Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]        const savePromises = players.map(player =>
+[2m2025-12-05T02:11:02Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]                                     ^
+[2m2025-12-05T02:11:02Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]TypeError: players.map is not a function
+[2m2025-12-05T02:11:02Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]    at StateSyncClient.syncAllPlayers (/usr/src/app/src/state-sync-client.js:72:38)
+[2m2025-12-05T02:11:02Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]    at Timeout._onTimeout (/usr/src/app/src/state-sync-client.js:38:18)
+[2m2025-12-05T02:11:02Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]    at listOnTimeout (node:internal/timers:569:17)
+[2m2025-12-05T02:11:02Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]    at process.processTimers (node:internal/timers:512:7)
+[2m2025-12-05T02:11:02Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Node.js v18.20.8
+[2m2025-12-05T02:11:03Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][32m INFO[0m Main child exited normally with code: 1
+[2m2025-12-05T02:11:03Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][32m INFO[0m Starting clean up.
+[2m2025-12-05T02:11:03Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][   64.128386] reboot: Restarting system
+[2m2025-12-05T02:11:03Z[0m runner[78171d2f90e618] [32mord[0m [[34minfo[0m]machine has reached its max restart count of 10
+[2m2025-12-05T02:12:30Z[0m runner[78171d2f90e618] [32mord[0m [[34minfo[0m]Pulling container image registry.fly.io/rscaievolution-png@sha256:d570a8fb5506614200abdb8361f351d4f51a0b51320157899482b8157ccb99f0
+[2m2025-12-05T02:12:31Z[0m runner[78171d2f90e618] [32mord[0m [[34minfo[0m]Successfully prepared image registry.fly.io/rscaievolution-png@sha256:d570a8fb5506614200abdb8361f351d4f51a0b51320157899482b8157ccb99f0 (708.654004ms)
+[2m2025-12-05T02:12:32Z[0m runner[78171d2f90e618] [32mord[0m [[34minfo[0m]Configuring firecracker
+[2m2025-12-05T02:51:53Z[0m proxy[78171d2f90e618] [32mord[0m [[34minfo[0m]Starting machine
+[2m2025-12-05T02:51:53Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]2025-12-05T02:51:53.322612150 [01KBP4GH8EDDBDA9FW7YRSNKF4:main] Running Firecracker v1.12.1
+[2m2025-12-05T02:51:53Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]2025-12-05T02:51:53.322774660 [01KBP4GH8EDDBDA9FW7YRSNKF4:main] Listening on API socket ("/fc.sock").
+[2m2025-12-05T02:51:54Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][32m INFO[0m Starting init (commit: 6f59af0a)...
+[2m2025-12-05T02:51:54Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][32m INFO[0m Preparing to run: `docker-entrypoint.sh node src/fly-server.js` as root
+[2m2025-12-05T02:51:54Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][32m INFO[0m [fly api proxy] listening at /.fly/api
+[2m2025-12-05T02:51:54Z[0m runner[78171d2f90e618] [32mord[0m [[34minfo[0m]Machine started in 1.031s
+[2m2025-12-05T02:51:54Z[0m proxy[78171d2f90e618] [32mord[0m [[34minfo[0m]machine started in 1.091723646s
+[2m2025-12-05T02:51:54Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading ./server...
+[2m2025-12-05T02:51:54Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading ./browser-socket...
+[2m2025-12-05T02:51:54Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading data-client...
+[2m2025-12-05T02:51:54Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading @2003scape/rsc-socket...
+[2m2025-12-05T02:51:54Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]2025/12/05 02:51:54 INFO SSH listening listen_address=[fdaa:37:c0d0:a7b:56a:a92d:bb6d:2]:22
+[2m2025-12-05T02:51:54Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading ./model/world...
+[2m2025-12-05T02:51:54Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading bole...
+[2m2025-12-05T02:51:54Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading net...
+[2m2025-12-05T02:51:54Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading ./packet-handlers...
+[2m2025-12-05T02:51:54Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading typedarray-to-buffer...
+[2m2025-12-05T02:51:54Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading ws...
+[2m2025-12-05T02:51:55Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading ./state-sync-client...
+[2m2025-12-05T02:51:55Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading ./fly-data-client...
+[2m2025-12-05T02:51:55Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading http...
+[2m2025-12-05T02:51:55Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading ../config.json...
+[2m2025-12-05T02:51:55Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]========================================
+[2m2025-12-05T02:51:55Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]🚀 Starting RSC Server on Fly.io
+[2m2025-12-05T02:51:55Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]========================================
+[2m2025-12-05T02:51:55Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]World ID: 1
+[2m2025-12-05T02:51:55Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Members: No (F2P only)
+[2m2025-12-05T02:51:55Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]WebSocket Port: 43594
+[2m2025-12-05T02:51:55Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]State Sync: 30s
+[2m2025-12-05T02:51:55Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]========================================
+[2m2025-12-05T02:51:55Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]FlyDataClient: Cloudflare KV mode {
+[2m2025-12-05T02:51:55Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]  accountId: '6872653edcee9c791787c1b783173793',
+[2m2025-12-05T02:51:55Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]  namespaceId: 'f2881801ac59415a86236d0841f27103',
+[2m2025-12-05T02:51:55Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]  hasToken: true
+[2m2025-12-05T02:51:55Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]}
+[2m2025-12-05T02:51:55Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]✅ FlyDataClient activated (Cloudflare KV for player data)
+[2m2025-12-05T02:51:55Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][StateSync] Initialized with interval: 30000ms
+[2m2025-12-05T02:51:55Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]✅ State sync to Cloudflare KV enabled
+[2m2025-12-05T02:51:55Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][StateSync] Started - syncing every 30 seconds
+[2m2025-12-05T02:51:55Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]========================================
+[2m2025-12-05T02:51:55Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]✅ RSC Server ready! Players can connect.
+[2m2025-12-05T02:51:55Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]========================================
+[2m2025-12-05T02:51:55Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]✅ Health check endpoint ready at /health
+[2m2025-12-05T02:51:55Z[0m proxy[78171d2f90e618] [32mord[0m [[34minfo[0m]machine became reachable in 1.28928324s
+[2m2025-12-05T03:02:22Z[0m runner[78171d2f90e618] [32mord[0m [[34minfo[0m]Pulling container image registry.fly.io/rscaievolution-png@sha256:de4c9d643a449f972343d803277643ca39b4aaeca369cdad29be2264b79bd571
+[2m2025-12-05T03:02:22Z[0m runner[78171d2f90e618] [32mord[0m [[34minfo[0m]Successfully prepared image registry.fly.io/rscaievolution-png@sha256:de4c9d643a449f972343d803277643ca39b4aaeca369cdad29be2264b79bd571 (707.228681ms)
+[2m2025-12-05T03:02:23Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][32m INFO[0m Sending signal SIGINT to main child process w/ PID 641
+[2m2025-12-05T03:02:23Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]📦 SIGINT received, shutting down gracefully...
+[2m2025-12-05T03:02:23Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][StateSync] Stopped
+[2m2025-12-05T03:02:23Z[0m runner[78171d2f90e618] [32mord[0m [[34minfo[0m]Configuring firecracker
+[2m2025-12-05T03:02:23Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][32m INFO[0m Main child exited normally with code: 0
+[2m2025-12-05T03:02:23Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][32m INFO[0m Starting clean up.
+[2m2025-12-05T03:02:23Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][  630.555587] reboot: Restarting system
+[2m2025-12-05T03:02:24Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]2025-12-05T03:02:24.623000730 [01KBP7BTK3R5NZVHCNDX1KYYMQ:main] Running Firecracker v1.12.1
+[2m2025-12-05T03:02:24Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]2025-12-05T03:02:24.623136960 [01KBP7BTK3R5NZVHCNDX1KYYMQ:main] Listening on API socket ("/fc.sock").
+[2m2025-12-05T03:02:25Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][32m INFO[0m Starting init (commit: 6f59af0a)...
+[2m2025-12-05T03:02:25Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][32m INFO[0m Preparing to run: `docker-entrypoint.sh node src/fly-server.js` as root
+[2m2025-12-05T03:02:25Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][32m INFO[0m [fly api proxy] listening at /.fly/api
+[2m2025-12-05T03:02:25Z[0m runner[78171d2f90e618] [32mord[0m [[34minfo[0m]Machine created and started in 3.33s
+[2m2025-12-05T03:02:25Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading ./server...
+[2m2025-12-05T03:02:25Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading ./browser-socket...
+[2m2025-12-05T03:02:25Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading data-client...
+[2m2025-12-05T03:02:25Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]2025/12/05 03:02:25 INFO SSH listening listen_address=[fdaa:37:c0d0:a7b:56a:a92d:bb6d:2]:22
+[2m2025-12-05T03:02:25Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading @2003scape/rsc-socket...
+[2m2025-12-05T03:02:25Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading ./model/world...
+[2m2025-12-05T03:02:26Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading bole...
+[2m2025-12-05T03:02:26Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading net...
+[2m2025-12-05T03:02:26Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading ./packet-handlers...
+[2m2025-12-05T03:02:26Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading typedarray-to-buffer...
+[2m2025-12-05T03:02:26Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading ws...
+[2m2025-12-05T03:02:26Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading ./state-sync-client...
+[2m2025-12-05T03:02:26Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading ./fly-data-client...
+[2m2025-12-05T03:02:26Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading http...
+[2m2025-12-05T03:02:26Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading ../config.json...
+[2m2025-12-05T03:02:26Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]========================================
+[2m2025-12-05T03:02:26Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]🚀 Starting RSC Server on Fly.io
+[2m2025-12-05T03:02:26Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]========================================
+[2m2025-12-05T03:02:26Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]World ID: 1
+[2m2025-12-05T03:02:26Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Members: No (F2P only)
+[2m2025-12-05T03:02:26Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]WebSocket Port: 43594
+[2m2025-12-05T03:02:26Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]State Sync: 30s
+[2m2025-12-05T03:02:26Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]========================================
+[2m2025-12-05T03:02:26Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]FlyDataClient: Cloudflare KV mode {
+[2m2025-12-05T03:02:26Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]  accountId: '6872653edcee9c791787c1b783173793',
+[2m2025-12-05T03:02:26Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]  namespaceId: 'f2881801ac59415a86236d0841f27103',
+[2m2025-12-05T03:02:26Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]  hasToken: true
+[2m2025-12-05T03:02:26Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]}
+[2m2025-12-05T03:02:26Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]✅ FlyDataClient activated (Cloudflare KV for player data)
+[2m2025-12-05T03:02:26Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][StateSync] Initialized with interval: 30000ms
+[2m2025-12-05T03:02:26Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]✅ State sync to Cloudflare KV enabled
+[2m2025-12-05T03:02:26Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][StateSync] Started - syncing every 30 seconds
+[2m2025-12-05T03:02:26Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]========================================
+[2m2025-12-05T03:02:26Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]✅ RSC Server ready! Players can connect.
+[2m2025-12-05T03:02:26Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]========================================
+[2m2025-12-05T03:02:26Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]✅ Health check endpoint ready at /health
+[2m2025-12-05T03:08:07Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][KV GET] Fetching key: player:testuser
+[2m2025-12-05T03:08:07Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][LOGIN DEBUG] Attempting login for user: 'testuser' (len=8) with password: 'TESTUSER' (len=8)
+[2m2025-12-05T03:08:07Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][LOGIN DEBUG] Version: 204, Config Version: 204
+[2m2025-12-05T03:08:07Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][KV GET] Status: 400 for key: player:testuser
+[2m2025-12-05T03:08:07Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][KV GET] Error: 400 {"success":false,"errors":[{"code":10001,"message":"Unable to authenticate request"}]}
+[2m2025-12-05T03:08:07Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Login error: Error: KV GET failed: 400
+[2m2025-12-05T03:08:07Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]    at IncomingMessage.<anonymous> (/usr/src/app/src/fly-data-client.js:122:32)
+[2m2025-12-05T03:08:07Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]    at IncomingMessage.emit (node:events:529:35)
+[2m2025-12-05T03:08:07Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]    at endReadableNT (node:internal/streams/readable:1400:12)
+[2m2025-12-05T03:08:07Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+[2m2025-12-05T03:08:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][LOGIN DEBUG] Attempting login for user: 'testuser' (len=8) with password: 'TESTUSER' (len=8)
+[2m2025-12-05T03:08:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][LOGIN DEBUG] Version: 204, Config Version: 204
+[2m2025-12-05T03:08:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][KV GET] Fetching key: player:testuser
+[2m2025-12-05T03:08:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][KV GET] Status: 400 for key: player:testuser
+[2m2025-12-05T03:08:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][KV GET] Error: 400 {"success":false,"errors":[{"code":10001,"message":"Unable to authenticate request"}]}
+[2m2025-12-05T03:08:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Login error: Error: KV GET failed: 400
+[2m2025-12-05T03:08:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]    at IncomingMessage.<anonymous> (/usr/src/app/src/fly-data-client.js:122:32)
+[2m2025-12-05T03:08:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]    at IncomingMessage.emit (node:events:529:35)
+[2m2025-12-05T03:08:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]    at endReadableNT (node:internal/streams/readable:1400:12)
+[2m2025-12-05T03:08:15Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+[2m2025-12-05T03:08:33Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][LOGIN DEBUG] Attempting login for user: 'pick_of_gods' (len=12) with password: 'Harvestmoon' (len=11)
+[2m2025-12-05T03:08:33Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][LOGIN DEBUG] Version: 204, Config Version: 204
+[2m2025-12-05T03:08:33Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][KV GET] Fetching key: player:pick_of_gods
+[2m2025-12-05T03:08:33Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][KV GET] Status: 400 for key: player:pick_of_gods
+[2m2025-12-05T03:08:33Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][KV GET] Error: 400 {"success":false,"errors":[{"code":10001,"message":"Unable to authenticate request"}]}
+[2m2025-12-05T03:08:33Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Login error: Error: KV GET failed: 400
+[2m2025-12-05T03:08:33Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]    at IncomingMessage.<anonymous> (/usr/src/app/src/fly-data-client.js:122:32)
+[2m2025-12-05T03:08:33Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]    at IncomingMessage.emit (node:events:529:35)
+[2m2025-12-05T03:08:33Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]    at endReadableNT (node:internal/streams/readable:1400:12)
+[2m2025-12-05T03:08:33Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+[2m2025-12-05T03:08:42Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][KV GET] Fetching key: player:pick_of_gods
+[2m2025-12-05T03:08:42Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][LOGIN DEBUG] Attempting login for user: 'pick_of_gods' (len=12) with password: 'Harvestmoon' (len=11)
+[2m2025-12-05T03:08:42Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][LOGIN DEBUG] Version: 204, Config Version: 204
+[2m2025-12-05T03:08:43Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][KV GET] Status: 400 for key: player:pick_of_gods
+[2m2025-12-05T03:08:43Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][KV GET] Error: 400 {"success":false,"errors":[{"code":10001,"message":"Unable to authenticate request"}]}
+[2m2025-12-05T03:08:43Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Login error: Error: KV GET failed: 400
+[2m2025-12-05T03:08:43Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]    at IncomingMessage.<anonymous> (/usr/src/app/src/fly-data-client.js:122:32)
+[2m2025-12-05T03:08:43Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]    at IncomingMessage.emit (node:events:529:35)
+[2m2025-12-05T03:08:43Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]    at endReadableNT (node:internal/streams/readable:1400:12)
+[2m2025-12-05T03:08:43Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+[2m2025-12-05T03:22:24Z[0m runner[78171d2f90e618] [32mord[0m [[34minfo[0m]Pulling container image registry.fly.io/rscaievolution-png@sha256:de4c9d643a449f972343d803277643ca39b4aaeca369cdad29be2264b79bd571
+[2m2025-12-05T03:22:24Z[0m runner[78171d2f90e618] [32mord[0m [[34minfo[0m]Container image registry.fly.io/rscaievolution-png@sha256:de4c9d643a449f972343d803277643ca39b4aaeca369cdad29be2264b79bd571 already prepared
+[2m2025-12-05T03:22:25Z[0m runner[78171d2f90e618] [32mord[0m [[34minfo[0m]Configuring firecracker
+[2m2025-12-05T03:22:25Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][32m INFO[0m Sending signal SIGINT to main child process w/ PID 641
+[2m2025-12-05T03:22:25Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]📦 SIGINT received, shutting down gracefully...
+[2m2025-12-05T03:22:25Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][StateSync] Stopped
+[2m2025-12-05T03:22:26Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][32m INFO[0m Main child exited normally with code: 0
+[2m2025-12-05T03:22:26Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][32m INFO[0m Starting clean up.
+[2m2025-12-05T03:22:26Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][ 1201.323120] reboot: Restarting system
+[2m2025-12-05T03:22:26Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]2025-12-05T03:22:26.764042262 [01KBP8GGRSWHAHRZP2CA63K05K:main] Running Firecracker v1.12.1
+[2m2025-12-05T03:22:26Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]2025-12-05T03:22:26.764166263 [01KBP8GGRSWHAHRZP2CA63K05K:main] Listening on API socket ("/fc.sock").
+[2m2025-12-05T03:22:27Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][32m INFO[0m Starting init (commit: 6f59af0a)...
+[2m2025-12-05T03:22:27Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][32m INFO[0m Preparing to run: `docker-entrypoint.sh node src/fly-server.js` as root
+[2m2025-12-05T03:22:27Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][32m INFO[0m [fly api proxy] listening at /.fly/api
+[2m2025-12-05T03:22:27Z[0m runner[78171d2f90e618] [32mord[0m [[34minfo[0m]Machine created and started in 3.145s
+[2m2025-12-05T03:22:27Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading ./server...
+[2m2025-12-05T03:22:27Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading ./browser-socket...
+[2m2025-12-05T03:22:27Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading data-client...
+[2m2025-12-05T03:22:27Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]2025/12/05 03:22:27 INFO SSH listening listen_address=[fdaa:37:c0d0:a7b:56a:a92d:bb6d:2]:22
+[2m2025-12-05T03:22:27Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading @2003scape/rsc-socket...
+[2m2025-12-05T03:22:28Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading ./model/world...
+[2m2025-12-05T03:22:28Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading bole...
+[2m2025-12-05T03:22:28Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading net...
+[2m2025-12-05T03:22:28Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading ./packet-handlers...
+[2m2025-12-05T03:22:28Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading typedarray-to-buffer...
+[2m2025-12-05T03:22:28Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading ws...
+[2m2025-12-05T03:22:28Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading ./state-sync-client...
+[2m2025-12-05T03:22:28Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading ./fly-data-client...
+[2m2025-12-05T03:22:28Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading http...
+[2m2025-12-05T03:22:28Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Loading ../config.json...
+[2m2025-12-05T03:22:28Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]========================================
+[2m2025-12-05T03:22:28Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]🚀 Starting RSC Server on Fly.io
+[2m2025-12-05T03:22:28Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]========================================
+[2m2025-12-05T03:22:28Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]World ID: 1
+[2m2025-12-05T03:22:28Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Members: No (F2P only)
+[2m2025-12-05T03:22:28Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]WebSocket Port: 43594
+[2m2025-12-05T03:22:28Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]State Sync: 30s
+[2m2025-12-05T03:22:28Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]========================================
+[2m2025-12-05T03:22:28Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]FlyDataClient: Cloudflare KV mode {
+[2m2025-12-05T03:22:28Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]  accountId: '6872653edcee9c791787c1b783173793',
+[2m2025-12-05T03:22:28Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]  namespaceId: 'f2881801ac59415a86236d0841f27103',
+[2m2025-12-05T03:22:28Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]  hasToken: true
+[2m2025-12-05T03:22:28Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]}
+[2m2025-12-05T03:22:28Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]✅ FlyDataClient activated (Cloudflare KV for player data)
+[2m2025-12-05T03:22:28Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][StateSync] Initialized with interval: 30000ms
+[2m2025-12-05T03:22:28Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]✅ State sync to Cloudflare KV enabled
+[2m2025-12-05T03:22:28Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][StateSync] Started - syncing every 30 seconds
+[2m2025-12-05T03:22:28Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]========================================
+[2m2025-12-05T03:22:28Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]✅ RSC Server ready! Players can connect.
+[2m2025-12-05T03:22:28Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]========================================
+[2m2025-12-05T03:22:28Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]✅ Health check endpoint ready at /health
+[2m2025-12-05T03:28:13Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][KV GET] Fetching key: player:pick_of_gods
+[2m2025-12-05T03:28:13Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][LOGIN DEBUG] Attempting login for user: 'pick_of_gods' (len=12) with password: 'Harvestmoon' (len=11)
+[2m2025-12-05T03:28:13Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][LOGIN DEBUG] Version: 204, Config Version: 204
+[2m2025-12-05T03:28:13Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][KV GET] Status: 400 for key: player:pick_of_gods
+[2m2025-12-05T03:28:13Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][KV GET] Error: 400 {"success":false,"errors":[{"code":10001,"message":"Unable to authenticate request"}]}
+[2m2025-12-05T03:28:13Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Login error: Error: KV GET failed: 400
+[2m2025-12-05T03:28:13Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]    at IncomingMessage.<anonymous> (/usr/src/app/src/fly-data-client.js:122:32)
+[2m2025-12-05T03:28:13Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]    at IncomingMessage.emit (node:events:529:35)
+[2m2025-12-05T03:28:13Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]    at endReadableNT (node:internal/streams/readable:1400:12)
+[2m2025-12-05T03:28:13Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+[2m2025-12-05T03:31:50Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][KV GET] Fetching key: player:testuser
+[2m2025-12-05T03:31:50Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][LOGIN DEBUG] Attempting login for user: 'testuser' (len=8) with password: 'TESTUSER' (len=8)
+[2m2025-12-05T03:31:50Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][LOGIN DEBUG] Version: 204, Config Version: 204
+[2m2025-12-05T03:31:50Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][KV GET] Status: 400 for key: player:testuser
+[2m2025-12-05T03:31:50Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m][KV GET] Error: 400 {"success":false,"errors":[{"code":10001,"message":"Unable to authenticate request"}]}
+[2m2025-12-05T03:31:50Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]Login error: Error: KV GET failed: 400
+[2m2025-12-05T03:31:50Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]    at IncomingMessage.<anonymous> (/usr/src/app/src/fly-data-client.js:122:32)
+[2m2025-12-05T03:31:50Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]    at IncomingMessage.emit (node:events:529:35)
+[2m2025-12-05T03:31:50Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]    at endReadableNT (node:internal/streams/readable:1400:12)
+[2m2025-12-05T03:31:50Z[0m app[78171d2f90e618] [32mord[0m [[34minfo[0m]    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)

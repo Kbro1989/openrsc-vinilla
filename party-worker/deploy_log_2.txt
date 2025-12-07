@@ -1,0 +1,12 @@
+
+ Γ¢à∩╕Å wrangler 4.47.0 (update available 4.53.0)
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+Total Upload: 20.58 KiB / gzip: 5.51 KiB
+Your Worker has access to the following bindings:
+Binding                        Resource            
+env.RSC_PARTY (RSCServer)      Durable Object      
+
+Uploaded rsc-party-worker (3.20 sec)
+Deployed rsc-party-worker triggers (1.77 sec)
+  https://rsc-party-worker.elderscapedev.workers.dev
+Current Version ID: 05505fa0-df1b-427e-b076-f49ee647e119

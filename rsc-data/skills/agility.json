@@ -1,0 +1,163 @@
+{
+    "courses": {
+        "gnome": {
+            "bonus": 150,
+            "obstacles": [
+                655,
+                647,
+                648,
+                650,
+                649,
+                653,
+                654
+            ],
+            "lastObstacle": 654
+        },
+        "barbarian": {
+            "bonus": 300,
+            "obstacles": [
+                675,
+                676,
+                677,
+                678,
+                163,
+                164
+            ],
+            "lastObstacle": 164
+        },
+        "wilderness": {
+            "bonus": 1500,
+            "obstacles": [
+                705,
+                706,
+                707,
+                708,
+                709
+            ],
+            "lastObstacle": 709
+        }
+    },
+    "obstacles": {
+        "655": {
+            "level": 1,
+            "xp": 30,
+            "type": "gnome_log"
+        },
+        "647": {
+            "level": 1,
+            "xp": 30,
+            "type": "gnome_net"
+        },
+        "648": {
+            "level": 1,
+            "xp": 30,
+            "type": "gnome_tower"
+        },
+        "650": {
+            "level": 1,
+            "xp": 30,
+            "type": "gnome_rope"
+        },
+        "649": {
+            "level": 1,
+            "xp": 30,
+            "type": "gnome_landing"
+        },
+        "653": {
+            "level": 1,
+            "xp": 30,
+            "type": "gnome_net_2"
+        },
+        "654": {
+            "level": 1,
+            "xp": 30,
+            "type": "gnome_pipe"
+        },
+        "675": {
+            "level": 35,
+            "xp": 80,
+            "type": "barb_swing",
+            "failDamage": 0.15
+        },
+        "676": {
+            "level": 35,
+            "xp": 50,
+            "type": "barb_log",
+            "failDamage": 0.10
+        },
+        "677": {
+            "level": 35,
+            "xp": 50,
+            "type": "barb_net"
+        },
+        "678": {
+            "level": 35,
+            "xp": 80,
+            "type": "barb_ledge",
+            "failDamage": 0.15
+        },
+        "163": {
+            "level": 35,
+            "xp": 20,
+            "type": "barb_wall"
+        },
+        "164": {
+            "level": 35,
+            "xp": 20,
+            "type": "barb_wall"
+        },
+        "671": {
+            "level": 35,
+            "xp": 20,
+            "type": "barb_pipe"
+        },
+        "672": {
+            "level": 35,
+            "xp": 20,
+            "type": "barb_pipe"
+        },
+        "679": {
+            "level": 35,
+            "xp": 20,
+            "type": "barb_wall_climb"
+        },
+        "703": {
+            "level": 52,
+            "xp": 50,
+            "type": "wild_gate"
+        },
+        "704": {
+            "level": 52,
+            "xp": 50,
+            "type": "wild_gate"
+        },
+        "705": {
+            "level": 52,
+            "xp": 50,
+            "type": "wild_pipe"
+        },
+        "706": {
+            "level": 52,
+            "xp": 100,
+            "type": "wild_rope",
+            "failDamage": 0.15
+        },
+        "707": {
+            "level": 52,
+            "xp": 80,
+            "type": "wild_stone",
+            "failDamage": 0.21
+        },
+        "708": {
+            "level": 52,
+            "xp": 80,
+            "type": "wild_ledge",
+            "failDamage": 0.25
+        },
+        "709": {
+            "level": 52,
+            "xp": 80,
+            "type": "wild_vine"
+        }
+    }
+}

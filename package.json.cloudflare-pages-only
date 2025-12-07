@@ -1,0 +1,15 @@
+{
+  "name": "rsc-authentic-client",
+  "version": "1.0.0",
+  "description": "Authentic RuneScape Classic Client Deployment",
+  "scripts": {
+    "dev": "wrangler pages dev public --port 8790 --kv KV --do RSC_SERVER=RSCServerDO@rsc-server-do",
+    "build": "cd rsc-server && npm install && npm run build-browser && cp dist/browser.bundle.min.js ../public/server.bundle.min.js",
+    "build:do": "cd durable-objects && wrangler deploy",
+    "deploy": "npm run build && npm run build:do && wrangler pages deploy public",
+    "load-save": "node scripts/load-save.js"
+  },
+  "dependencies": {
+    "wrangler": "^3.0.0"
+  }
+}

@@ -1,0 +1,33 @@
+# Artifacts and temporary files
+.gemini/
+*.log
+*.tmp
+
+# Build outputs
+dist/
+.wrangler/
+node_modules/
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test/debug scripts
+scripts/find-*.cjs
+scripts/find-*.js
+*_results.txt
+*_list.txt
+
+# Temporary data
+saves/
+*.json.backup
+restore.json
+login_*.json
+debug_*.txt
+item-*-verification*.json
