@@ -206,18 +206,23 @@ class BrowserDataClient {
                     if (this.isDurableObject) {
                         // Direct KV access
                         player = await this.getPlayerFromKV(message.username);
-
-                        if (!player || player.password !== message.password) {
-                            return { success: false, code: 3 }; // Invalid credentials
-                        }
                     } else {
-                        // Browser localStorage mode
-                        player = this.players.get(message.username);
-
-                        if (!player || player.password !== message.password) {
-                            return { success: false, code: 3 }; // Invalid credentials
+                        // Browser Fetch Mode (Authentic Client Shared Persistence)
+                        try {
+                            const response = await fetch(`/api/player/load?username=${encodeURIComponent(message.username)}`);
+                            if (response.ok) {
+                                player = await response.json();
+                                log.info(`Player loaded from API: ${player.username}`);
+                            } else if (response.status !== 404) {
+                                console.error('API Load Error:', response.status);
+                            }
+                        } catch (e) {
+                            console.error('Fetch error:', e);
                         }
-                        log.info(`Player login: ${player.username}`);
+                    }
+
+                    if (!player || player.password !== message.password) {
+                        return { success: false, code: 3 }; // Invalid credentials
                     }
 
                     if (player.world) {
