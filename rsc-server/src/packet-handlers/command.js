@@ -404,8 +404,8 @@ async function command({ player }, { command, args }) {
                             ];
                         } else if (rareChoice === 1) {
                             itemsToShow = [
-                                { id: 828, name: 'Red Mask' }, { id: 829, name: 'Blue Mask' },
-                                { id: 831, name: 'Green Mask' }
+                                { id: 831, name: 'Red Mask' }, { id: 832, name: 'Blue Mask' },
+                                { id: 828, name: 'Green Mask' }
                             ];
                         } else if (rareChoice === 2) {
                             itemsToShow = [
