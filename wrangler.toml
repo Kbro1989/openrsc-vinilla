@@ -2,26 +2,26 @@ name = "rsc-authentic-client"
 pages_build_output_dir = "public"
 compatibility_date = "2024-11-28"
 
-# 1. CORE DATA LAYERS (Free Tier Optimized)
+# 1. CORE DATA LAYERS
 [[kv_namespaces]]
 binding = "KV"
-id = "f2881801ac59415a86236d0841f27103"  # Hot data: Player saves, Items, NPCs
+id = "f2881801ac59415a86236d0841f27103"
 
 [[d1_databases]]
 binding = "DB"
 database_name = "ai-architect-db"
-database_id = "e8cea666-e70f-43e4-9a5e-54fd7fc80fa4" # Cold data: Logs, Leaderboards
+database_id = "e8cea666-e70f-43e4-9a5e-54fd7fc80fa4"
 
-# Asset Storage (Requires Sponsor > $5/mo to enable)
-[[r2_buckets]]
-binding = "RSC_ASSETS"
-bucket_name = "rsc-assets"
-preview_bucket_name = "rsc-assets-preview"
+# 2. FEATURE FLAGS
+[vars]
+SAFETY_REQ_CAP = "90000"
+FEATURE_R2_ASSETS = "false"
+FEATURE_UNLIMITED = "false"
+FEATURE_BACKUPS = "false"
+SHARD_MAPPING = '{"US":"DO_AMERICAS", "GB":"DO_EUROPE", "DE":"DO_EUROPE", "JP":"DO_ASIA", "AU":"DO_OCEANIA"}'
 
-# 2. REGIONAL SHARDS (Zero-Cost Sharding)
-# Each region = 1 DO = 100 concurrent players (Free Tier Limit)
-# Total Capacity: 400 concurrent for $0
-
+# 3. DURABLE OBJECTS (Not typically used in static Pages, but kept for Worker integration if via Functions)
+# Note: Bindings in Pages usually scoped to Functions.
 [[durable_objects.bindings]]
 name = "DO_AMERICAS"
 class_name = "GameWorld"
@@ -41,26 +41,3 @@ script_name = "rsc-server-do"
 name = "DO_OCEANIA"
 class_name = "GameWorld"
 script_name = "rsc-server-do"
-
-# 3. FEATURE FLAGS & SAFETY CAPS
-[vars]
-# Safety: Hard cap request processing to avoid overages
-SAFETY_REQ_CAP = "90000"  # Stop at 90k/day (Limit 100k)
-
-# Sponsor Toggles (Unlocked via Webhook)
-FEATURE_R2_ASSETS = "false"   # > $5/mo sponsor
-FEATURE_UNLIMITED = "false"   # > $20/mo sponsor
-FEATURE_BACKUPS = "false"     # > $10/mo sponsor
-
-# Regional Routing Config
-SHARD_MAPPING = '{"US":"DO_AMERICAS", "GB":"DO_EUROPE", "DE":"DO_EUROPE", "JP":"DO_ASIA", "AU":"DO_OCEANIA"}'
-
-# 4. ENVIRONMENT OVERRIDES
-[env.production]
-name = "rsc-authentic-prod"
-# Production overrides here...
-
-[env.demo]
-name = "rsc-authentic-demo"
-# Demo overrides here...
-
