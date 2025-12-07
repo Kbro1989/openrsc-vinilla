@@ -10,6 +10,7 @@ export async function onRequestGet(context) {
 
         // Direct KV Access (No Durable Object)
         const playerJson = await env.KV.get(username.toLowerCase());
+        console.log(`[API] Loading player ${username}: ${playerJson ? 'Found' : 'Not Found'}`);
 
         if (!playerJson) {
             return new Response(JSON.stringify({ success: false, error: "Player not found" }), { status: 404 });
