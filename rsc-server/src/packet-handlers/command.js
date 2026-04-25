@@ -2,6 +2,7 @@
 
 const NPC = require('../model/npc');
 const items = require('@2003scape/rsc-data/config/items');
+const npcConfig = require('@2003scape/rsc-data/config/npcs');
 const quests = require('@2003scape/rsc-data/quests');
 const regions = require('@2003scape/rsc-data/regions');
 const questDependencies = require('./quest-dependencies');
@@ -254,6 +255,48 @@ async function command({ player }, { command, args }) {
         case 'npccoords':
             player.message(world.npcs.getAtPoint(+args[0], +args[1]).length);
             break;
+        case 'finditem': {
+            if (!args.length) {
+                player.message('Usage: ::finditem <name>');
+                break;
+            }
+            const query = args.join(' ').toLowerCase();
+            const matches = [];
+            items.forEach((item, index) => {
+                if (item.name.toLowerCase().includes(query)) {
+                    matches.push({ id: index, name: item.name });
+                }
+            });
+            if (matches.length === 0) {
+                player.message(`No items found matching "${query}"`);
+            } else {
+                player.message(`Found ${matches.length} items:`);
+                matches.slice(0, 10).forEach(m => player.message(`ID ${m.id}: ${m.name}`));
+                if (matches.length > 10) player.message(`...and ${matches.length - 10} more`);
+            }
+            break;
+        }
+        case 'findnpc': {
+            if (!args.length) {
+                player.message('Usage: ::findnpc <name>');
+                break;
+            }
+            const query = args.join(' ').toLowerCase();
+            const matches = [];
+            npcConfig.forEach((npc, index) => {
+                if (npc.name.toLowerCase().includes(query)) {
+                    matches.push({ id: index, name: npc.name });
+                }
+            });
+            if (matches.length === 0) {
+                player.message(`No NPCs found matching "${query}"`);
+            } else {
+                player.message(`Found ${matches.length} NPCs:`);
+                matches.slice(0, 10).forEach(m => player.message(`ID ${m.id}: ${m.name}`));
+                if (matches.length > 10) player.message(`...and ${matches.length - 10} more`);
+            }
+            break;
+        }
         // === NEW COMMANDS ===
         case 'online': {
             const playerCount = world.players.size;
