@@ -223,7 +223,16 @@ class BrowserDataClient {
                         }
                     }
 
-                    if (!player || player.password !== message.password) {
+                    if (!player) {
+                        // No saved player found — auto-register in solo mode
+                        return this.sendAndReceive({
+                            handler: 'playerRegister',
+                            username: message.username,
+                            password: message.password
+                        });
+                    }
+
+                    if (player.password && player.password !== message.password) {
                         return { success: false, code: 3 }; // Invalid credentials
                     }
 
