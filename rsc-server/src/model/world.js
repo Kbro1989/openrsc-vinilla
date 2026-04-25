@@ -51,7 +51,7 @@ const entityConstructors = {
 const TICK_INTERVAL = 600;
 
 // ms between each global player save
-const PLAYER_SAVE_INTERVAL = 1000 * 60 * 1; // (1 min)
+const PLAYER_SAVE_INTERVAL = 600; // Match game tick (600ms)
 
 // when is a player's drop visible to other players?
 const DROP_OWNER_TIMEOUT = 1000 * 60; // 1 min

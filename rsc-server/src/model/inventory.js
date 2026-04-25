@@ -57,7 +57,7 @@ function getAnimationIndex(equip) {
 class Inventory {
     constructor(player, items = []) {
         this.player = player;
-        this.items = items.map((item) => new Item(item));
+        this.items = (Array.isArray(items) ? items : []).map((item) => new Item(item));
 
         // { type: inventoryIndex }
         this.equipmentSlots = {

@@ -39,7 +39,7 @@ class DataClient {
     }
 
     get db() {
-        return this.server.env && this.server.env.DB;
+        return this.server.env && (this.server.env.DB || this.server.env.KV || this.server.env.PLAYERS_KV);
     }
 
     connect() {
@@ -160,9 +160,14 @@ class DataClient {
     // --- D1 Implementation ---
 
     async handleD1Message(message) {
-        // Mock success for auth/handshake calls
+        const isKV = this.db && !this.db.prepare;
+
         if (['authenticate', 'worldConnect'].includes(message.handler)) {
             return { success: true };
+        }
+
+        if (isKV) {
+            return this.handleKVMessage(message);
         }
 
         if (message.handler === 'playerLogin') {
@@ -173,17 +178,91 @@ class DataClient {
             return this.d1PlayerSave(message);
         }
 
-
         if (message.handler === 'playerRegister') {
             return this.d1PlayerRegister(message);
         }
 
         if (message.handler === 'playerGetWorlds') {
-            return { usernameWorlds: {} }; // Mock: all offline/local
+            return { usernameWorlds: {} };
         }
 
         console.warn(`[DataClient] Unhandled D1 message: ${message.handler}`);
         return { success: false, error: 'Not implemented in D1 mode' };
+    }
+
+    async handleKVMessage(message) {
+        const username = message.username?.toLowerCase();
+        const key = `player:${username}`;
+
+        if (message.handler === 'playerLogin') {
+            try {
+                const data = await this.db.get(key);
+                if (!data) {
+                    return this.handleKVMessage({ ...message, handler: 'playerRegister' });
+                }
+                const player = JSON.parse(data);
+                if (player.pass !== message.password) {
+                    return { success: false, code: 3 };
+                }
+                player.id = -1;
+                player.username = username;
+                return { success: true, code: 0, player };
+            } catch (e) {
+                console.error('[DataClient] KV Login Error:', e);
+                return { success: false, code: 5 };
+            }
+        }
+
+        if (message.handler === 'playerUpdate') {
+            try {
+                const existing = await this.db.get(key);
+                const existingData = existing ? JSON.parse(existing) : {};
+                const dataToSave = { ...message };
+                delete dataToSave.handler;
+                delete dataToSave.token;
+
+                const merged = { ...existingData, ...dataToSave, updated_at: Date.now() };
+                await this.db.put(key, JSON.stringify(merged));
+                return { success: true };
+            } catch (e) {
+                console.error('[DataClient] KV Save Error:', e);
+                return { success: false };
+            }
+        }
+
+        if (message.handler === 'playerRegister') {
+            try {
+                const existing = await this.db.get(key);
+                if (existing) return { success: false, code: 3 };
+
+                const newPlayer = {
+                    username: username,
+                    pass: message.password,
+                    x: 213, y: 436, // Using user's provided coordinates
+                    fatigue: 0,
+                    combatStyle: 0,
+                    blockChat: 0, blockPrivateChat: 0, blockTrade: 0, blockDuel: 0,
+                    cameraAuto: 0, oneMouseButton: 0,
+                    loginDate: Date.now(),
+                    friends: [], ignores: [],
+                    skills: {},
+                    inventory: [], bank: [],
+                    questPoints: 0, questStages: {}
+                };
+
+                await this.db.put(key, JSON.stringify(newPlayer));
+                return { success: true, code: 2 };
+            } catch (e) {
+                console.error('[DataClient] KV Register Error:', e);
+                return { success: false, code: 5 };
+            }
+        }
+
+        if (message.handler === 'playerGetWorlds') {
+            return { usernameWorlds: {} };
+        }
+
+        return { success: false };
     }
 
     async d1PlayerLogin(msg) {
@@ -354,7 +433,10 @@ class DataClient {
     }
 
     async playerLogin(data) {
-        if (this.db) return this.d1PlayerLogin(data);
+        if (this.db) {
+            if (!this.db.prepare) return this.handleKVMessage({ handler: 'playerLogin', ...data });
+            return this.d1PlayerLogin(data);
+        }
         return this.sendAndReceive({ handler: 'playerLogin', ...data });
     }
 
@@ -369,7 +451,10 @@ class DataClient {
     }
 
     async playerRegister(data) {
-        if (this.db) return this.d1PlayerRegister(data);
+        if (this.db) {
+            if (!this.db.prepare) return this.handleKVMessage({ handler: 'playerRegister', ...data });
+            return this.d1PlayerRegister(data);
+        }
         return this.sendAndReceive({ handler: 'playerRegister', ...data });
     }
 

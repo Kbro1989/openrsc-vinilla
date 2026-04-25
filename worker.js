@@ -21,28 +21,19 @@ export default {
             return await handleAsset(request, env, url);
         }
 
-        // --- 3. REGIONAL GAME SHARDING ---
-        // Route WebSocket/API traffic to the nearest regional Durable Object
-        const country = request.cf?.country || 'US';
-        const shardMapping = env.SHARD_MAPPING ? JSON.parse(env.SHARD_MAPPING) : {};
-
-        // Default to Americas if no mapping found
-        const shardBindingName = shardMapping[country] || 'DO_AMERICAS';
-        const doBinding = env[shardBindingName];
+        // --- 3. SOVEREIGN GAME SHARDING ---
+        // Force all traffic to the single Sovereign Shard for total world consistency
+        const doBinding = env.RSC_SERVER || env.GAME_WORLD;
 
         if (!doBinding) {
-            return new Response(`Configuration Error: Region ${shardBindingName} not found`, { status: 500 });
+            return new Response("Configuration Error: RSC_SERVER binding not found", { status: 500 });
         }
 
-        // Use a stable ID for the region (singleton per region)
-        const id = doBinding.idFromName(shardBindingName);
+        // Use a stable ID for the global world instance
+        const id = doBinding.idFromName('sovereign-world-alpha');
         const stub = doBinding.get(id);
 
-        // **WebSocket Upgrade**: Forward WebSocket connections directly to Durable Object
-        if (request.headers.get('Upgrade') === 'websocket') {
-            return stub.fetch(request);
-        }
-
+        // Forward connection to the Sovereign Shard
         return stub.fetch(request);
     }
 };

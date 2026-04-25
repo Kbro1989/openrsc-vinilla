@@ -149,18 +149,18 @@ class Player extends Character {
         // ticks remaining until unskulled
         this.skulled = playerData.skulled;
 
-        this.friends = playerData.friends;
-        this.ignores = playerData.ignores;
-        this.questStages = playerData.questStages;
-        this.cache = playerData.cache;
+        this.friends = playerData.friends || [];
+        this.ignores = playerData.ignores || [];
+        this.questStages = playerData.questStages || {};
+        this.cache = playerData.cache || {};
 
-        this.skills = playerData.skills;
+        this.skills = playerData.skills || {};
 
         // Fix for missing base levels (if they were not saved)
         for (const skillName of Object.keys(this.skills)) {
             const skill = this.skills[skillName];
-            if (!skill.base) {
-                skill.base = experienceToLevel(skill.experience);
+            if (skill && !skill.base) {
+                skill.base = experienceToLevel(skill.experience || 0);
             }
         }
 
@@ -1691,20 +1691,25 @@ class Player extends Character {
     }
 
     async save() {
-        let message = { handler: 'playerUpdate' };
+        let saveData = { handler: 'playerUpdate' };
 
-        for (const property of SAVE_PROPERTIES) {
-            if (typeof this.property === 'object') {
-                message[property] = { ...this[property] };
+        for (const key of SAVE_PROPERTIES) {
+            if (this[key] && typeof this[key] === 'object') {
+                if (Array.isArray(this[key])) {
+                    saveData[key] = [...this[key]];
+                } else if (typeof this[key].serialize === 'function') {
+                    saveData[key] = this[key].serialize();
+                } else {
+                    saveData[key] = { ...this[key] };
+                }
             } else {
-                message[property] = this[property];
+                saveData[key] = this[key];
             }
         }
 
-        message = { ...message, ...this.appearance };
+        saveData = { ...saveData, ...this.appearance };
 
-
-        await this.world.server.dataClient.sendAndReceive(message);
+        await this.world.server.dataClient.sendAndReceive(saveData);
     }
 
     toString() {

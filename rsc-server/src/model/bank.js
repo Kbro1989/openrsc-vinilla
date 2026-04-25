@@ -4,7 +4,7 @@ const items = require('@2003scape/rsc-data/config/items');
 class Bank {
     constructor(player, items = []) {
         this.player = player;
-        this.items = items.map((item) => new Item(item));
+        this.items = (Array.isArray(items) ? items : []).map((item) => new Item(item));
 
         // Set to 1500 to accommodate all ~1200 unique items in RSC with room to spare
         this.maxItems = 1500;
