@@ -52,6 +52,14 @@ async function login(socket, message) {
     if (world.players.length >= MAX_PLAYERS) {
         socket.send(Buffer.from([14]));
         process.nextTick(() => socket.close());
+        return;
+    }
+
+    if (world.getPlayerByUsername(username)) {
+        console.error(`[LOGIN DEBUG] Player ${username} is already online.`);
+        socket.send(Buffer.from([4])); // 4 = already in use
+        process.nextTick(() => socket.close());
+        return;
     }
 
     console.error(`[LOGIN DEBUG] Calling dataClient.playerLogin for ${username}...`);

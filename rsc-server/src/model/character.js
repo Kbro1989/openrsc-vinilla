@@ -29,8 +29,14 @@ function getDirectionNumber(deltaX, deltaY) {
     if (deltaX === 0 && deltaY === 0) {
         return 0;
     }
-
-    return deltaDirections[deltaX + 1][deltaY + 1];
+    const x = Math.max(-1, Math.min(1, deltaX));
+    const y = Math.max(-1, Math.min(1, deltaY));
+    const row = deltaDirections[x + 1];
+    if (!row) {
+        console.error('getDirectionNumber CRASH:', { deltaX, deltaY, x, y });
+        return 0;
+    }
+    return row[y + 1];
 }
 
 function getDirectionDelta(directionNumber) {
@@ -415,7 +421,9 @@ class Character extends Entity {
 
     //TODO changeDirection?
     walkTo(deltaX, deltaY) {
-        if (this.isWalking) {
+        if (this.isWalking || typeof deltaX !== 'number' || typeof deltaY !== 'number' || Number.isNaN(deltaX) || Number.isNaN(deltaY)) {
+            if (this.isWalking) return;
+            console.error('walkTo invalid delta:', { deltaX, deltaY });
             return;
         }
 

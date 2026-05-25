@@ -1694,16 +1694,17 @@ class Player extends Character {
         let saveData = { handler: 'playerUpdate' };
 
         for (const key of SAVE_PROPERTIES) {
-            if (this[key] && typeof this[key] === 'object') {
-                if (Array.isArray(this[key])) {
-                    saveData[key] = [...this[key]];
-                } else if (typeof this[key].serialize === 'function') {
+            if (this[key] !== undefined && this[key] !== null) {
+                if (typeof this[key].serialize === 'function') {
+                    // Call the object's authentic custom serialization method
                     saveData[key] = this[key].serialize();
+                } else if (typeof this[key] === 'object') {
+                    // Deep copy plain objects
+                    saveData[key] = JSON.parse(JSON.stringify(this[key]));
                 } else {
-                    saveData[key] = { ...this[key] };
+                    // Simple property
+                    saveData[key] = this[key];
                 }
-            } else {
-                saveData[key] = this[key];
             }
         }
 

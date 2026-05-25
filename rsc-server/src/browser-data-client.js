@@ -103,6 +103,7 @@ class BrowserDataClient {
     }
 
     async savePlayer(player) {
+        console.log(`[BDC] >> SAVE START: ${player.username}`);
         // We need the password to save it back
         const cached = this.players.get(player.username.toLowerCase());
         if (cached && cached.password && !player.password) {
@@ -116,14 +117,15 @@ class BrowserDataClient {
                 await this.env.KV.put(key, JSON.stringify(player));
             } else {
                 // Browser fetch mode
-                await fetch('/api/player/save', {
+                const response = await fetch('/api/player/save', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(player)
                 });
+                console.log(`[BDC] << SAVE END: ${player.username} (status: ${response.status})`);
             }
         } catch (err) {
-            console.error('Error saving player:', err);
+            console.error('[BDC] !! SAVE ERROR:', err);
         }
     }
 
@@ -154,19 +156,26 @@ class BrowserDataClient {
     async sendAndReceive(message) {
         switch (message.handler) {
             case 'playerRegister': {
+                console.log(`[BDC] !!! playerRegister called for ${message.username}`);
                 message.username = message.username.toLowerCase();
 
                 const player = JSON.parse(JSON.stringify(DEFAULT_PLAYER));
                 player.username = message.username;
                 player.password = message.password;
                 player.id = Math.floor(Math.random() * 1000000); // Random ID for now
+                player.loginDate = Date.now();
+                player.inventory = player.inventory || [];
+                player.bank = player.bank || [];
+                player.skills = player.skills || DEFAULT_PLAYER.skills;
 
+                console.log(`[BDC] Attempting persistence for new player ${player.username}`);
+                
                 try {
                     if (this.isDurableObject) {
                         // Direct KV check for existing player
                         const existing = await this.getPlayerFromKV(message.username);
                         if (existing) {
-                            return { success: false, code: 4 }; // Username taken
+                            return { success: false, code: 13 }; // Username taken
                         }
 
                         // Save new player to KV
@@ -177,28 +186,29 @@ class BrowserDataClient {
                         // Browser Worker mode - use in-memory Map
                         const existing = this.players.get(message.username);
                         if (existing) {
-                            return { success: false, code: 4 }; // Username taken
+                            return { success: false, code: 13 }; // Username taken
                         }
 
-                        // Save to in-memory cache
+                        // Save to in-memory cache and persist
+                        console.log(`[BDC] Calling savePlayer for ${player.username}`);
                         this.players.set(player.username, player);
+                        await this.savePlayer(player);
+                        console.log(`[BDC] Registration persistence completed for ${player.username}`);
+                        
                         this.playerUsernames.set(player.id, player.username);
                         log.info(`Registered new player: ${player.username}`);
                         return { success: true, code: 2, player }; // code 2 = success
                     }
                 } catch (err) {
-                    console.error('Register error:', err);
+                    console.error('[BDC] !!! Register error:', err);
                     return { success: false, code: 3 };
                 }
             }
             case 'playerLogin': {
                 message.username = message.username.toLowerCase();
 
-                // Check if already logged in locally
-                const cached = this.players.get(message.username);
-                if (cached && cached.world) {
-                    return { success: false, code: 4 };
-                }
+                // If user is currently cached, clean it out first to ensure a fresh state
+                this.players.delete(message.username);
 
                 try {
                     let player;

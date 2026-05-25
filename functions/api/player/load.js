@@ -9,10 +9,14 @@ export async function onRequestGet(context) {
         }
 
         // Direct KV Access (No Durable Object)
-        const playerJson = await env.KV.get(username.toLowerCase());
-        console.log(`[API] Loading player ${username}: ${playerJson ? 'Found' : 'Not Found'}`);
+        const key = `player:${username.toLowerCase()}`;
+        const playerJson = await env.KV.get(key);
+        console.log(`[API] Loading player ${username} from key ${key}: ${playerJson ? 'Found' : 'Not Found'}`);
 
         if (!playerJson) {
+            // Debug: List keys to see if we can find it
+            const list = await env.KV.list({ prefix: 'player:' });
+            console.log('[API] Debug: Current keys in KV:', list.keys.map(k => k.name));
             return new Response(JSON.stringify({ success: false, error: "Player not found" }), { status: 404 });
         }
 

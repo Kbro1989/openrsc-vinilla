@@ -5,7 +5,8 @@ compatibility_date = "2024-11-28"
 # 1. CORE DATA LAYERS
 [[kv_namespaces]]
 binding = "KV"
-id = "f2881801ac59415a86236d0841f27103"
+id = "883369c71eea44ac934ae1e5f0f366af"
+preview_id = "883369c71eea44ac934ae1e5f0f366af"
 
 # [[d1_databases]]
 # binding = "DB"

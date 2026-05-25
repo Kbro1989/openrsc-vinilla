@@ -51,7 +51,7 @@ const entityConstructors = {
 const TICK_INTERVAL = 600;
 
 // ms between each global player save
-const PLAYER_SAVE_INTERVAL = 600; // Match game tick (600ms)
+const PLAYER_SAVE_INTERVAL = 30000; // 30 seconds
 
 // when is a player's drop visible to other players?
 const DROP_OWNER_TIMEOUT = 1000 * 60; // 1 min
@@ -193,9 +193,34 @@ class World {
         // );
 
         this.pathFinder = {
-            isTileBlocked: () => false,
-            addObject: () => { },
-            addWallObject: () => { }
+            isTileBlocked: (x, y) => {
+                try {
+                    const tile = this.landscape.getTileAtGameCoords(x, y);
+                    if (tile && (tile.ground.collision || tile.roof.collision)) {
+                        return true;
+                    }
+                    if (this.gameObjects.getAtPoint(x, y).length > 0) return true;
+                    if (this.wallObjects.getAtPoint(x, y).length > 0) return true;
+                } catch (e) {
+                    return true;
+                }
+                return false;
+            },
+            addObject: (obj) => { },
+            addWallObject: (obj) => { },
+            isValidGameStep: (x, y) => {
+                try {
+                    const tile = this.landscape.getTileAtGameCoords(x, y);
+                    if (tile && (tile.ground.collision || tile.roof.collision)) {
+                        return false;
+                    }
+                    if (this.gameObjects.getAtPoint(x, y).length > 0) return false;
+                    if (this.wallObjects.getAtPoint(x, y).length > 0) return false;
+                } catch (e) {
+                    return false;
+                }
+                return true;
+            }
         };
 
         // Verification: Collision at 0,0

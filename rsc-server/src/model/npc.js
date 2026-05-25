@@ -260,6 +260,8 @@ class NPC extends Character {
         if (this.stepsLeft > 0) {
             if (
                 this.stepsLeft < 3 &&
+                typeof this.lastDeltaX !== 'undefined' &&
+                typeof this.lastDeltaY !== 'undefined' &&
                 Math.random() >= 0.25 &&
                 this.canWalk(this.lastDeltaX, this.lastDeltaY)
             ) {

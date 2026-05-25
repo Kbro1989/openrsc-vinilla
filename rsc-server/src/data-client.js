@@ -379,7 +379,7 @@ class DataClient {
 
             if (result) {
                 // Username already taken
-                return { success: false, code: 3 }; // 3 = username taken (client understands this)
+                return { success: false, code: 13 }; // 13 = username taken
             }
 
             // Create new player
@@ -387,7 +387,7 @@ class DataClient {
 
             const newPlayer = {
                 username: cleanUser,
-                pass: password,
+                password: password,
                 x: 329, y: 552, // Tutorial Island
                 fatigue: 0,
                 combatStyle: 0,

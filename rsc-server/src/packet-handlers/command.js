@@ -345,6 +345,7 @@ async function command({ player }, { command, args }) {
         case 'help': {
             try {
                 const mainChoice = await player.ask([
+                    'Search Items >>',
                     'Spawn Items >>',
                     'Teleport >>',
                     '::coords - Show location',
@@ -356,6 +357,40 @@ async function command({ player }, { command, args }) {
                 ]);
 
                 if (mainChoice === 0) {
+                    const searchName = await player.prompt('Enter item name to search:');
+                    if (searchName) {
+                        const matches = items.map((item, idx) => ({ 
+                            name: item.name, 
+                            id: idx, 
+                            score: item.name.toLowerCase().includes(searchName.toLowerCase()) ? (item.name.toLowerCase().startsWith(searchName.toLowerCase()) ? 2 : 1) : 0 
+                        })).filter(m => m.score > 0).sort((a, b) => b.score - a.score).slice(0, 10);
+                        
+                        if (matches.length > 0) {
+                            const itemNames = matches.map(m => m.name);
+                            itemNames.push('[Back]');
+                            const itemChoice = await player.ask(itemNames);
+                            if (itemChoice < matches.length) {
+                                const item = matches[itemChoice];
+                                const quantity = await player.prompt('Enter quantity:');
+                                const qty = parseInt(quantity) || 1;
+                                const destChoice = await player.ask(['Inventory', 'Bank', 'Ground', '[Back]']);
+                                
+                                if (destChoice === 0) {
+                                    player.inventory.add(item.id, qty);
+                                    player.message(`Added ${qty}x ${item.name} to inventory.`);
+                                } else if (destChoice === 1) {
+                                    player.bank.add(item.id, qty);
+                                    player.message(`Added ${qty}x ${item.name} to bank.`);
+                                } else if (destChoice === 2) {
+                                    world.addPlayerDrop(player, { id: item.id, amount: qty });
+                                    player.message(`Dropped ${qty}x ${item.name} on ground.`);
+                                }
+                            }
+                        } else {
+                            player.message('No items found.');
+                        }
+                    }
+                } else if (mainChoice === 1) {
                     const catChoice = await player.ask([
                         'Consumables >>',
                         'Armour >>',
@@ -371,8 +406,9 @@ async function command({ player }, { command, args }) {
                         const consumeChoice = await player.ask(['Food >>', 'Potions >>', 'Drinks >>', '[Back]']);
                         if (consumeChoice === 0) {
                             itemsToShow = [
-                                { id: 546, name: 'Lobster' }, { id: 373, name: 'Swordfish' },
-                                { id: 370, name: 'Shark' }, { id: 325, name: 'Meat Pizza' }
+                                { id: 373, name: 'Lobster' }, { id: 370, name: 'Swordfish' },
+                                { id: 546, name: 'Shark' }, { id: 326, name: 'Meat Pizza' },
+                                { id: 330, name: 'Cake' }, { id: 346, name: 'Stew' }
                             ];
                         } else if (consumeChoice === 1) {
                             itemsToShow = [
@@ -390,27 +426,25 @@ async function command({ player }, { command, args }) {
                         const armorChoice = await player.ask(['Helmets >>', 'Bodies >>', 'Legs >>', 'Shields >>', '[Back]']);
                         if (armorChoice === 0) {
                             itemsToShow = [
-                                { id: 112, name: 'Bronze Med' }, { id: 104, name: 'Steel Med' },
-                                { id: 116, name: 'Addy Med' }, { id: 120, name: 'Rune Med' },
-                                { id: 795, name: 'Dragon Med' }
+                                { id: 104, name: 'Medium Bronze Helmet' }, { id: 105, name: 'Medium Steel Helmet' },
+                                { id: 107, name: 'Medium Adamantite Helmet' }, { id: 399, name: 'Medium Rune Helmet' },
+                                { id: 795, name: 'Dragon medium Helmet' }
                             ];
                         } else if (armorChoice === 1) {
                             itemsToShow = [
-                                { id: 8, name: 'Bronze Plate' }, { id: 86, name: 'Steel Plate' },
-                                { id: 84, name: 'Addy Plate' }, { id: 401, name: 'Rune Plate' },
-                                { id: 1278, name: 'Dragon Plate' }
+                                { id: 117, name: 'Bronze Plate Mail Body' }, { id: 118, name: 'Steel Plate Mail Body' },
+                                { id: 120, name: 'Adamantite Plate Mail Body' }, { id: 401, name: 'Rune Plate Mail Body' }
                             ];
                         } else if (armorChoice === 2) {
                             itemsToShow = [
-                                { id: 206, name: 'Bronze Legs' }, { id: 121, name: 'Steel Legs' },
-                                { id: 125, name: 'Addy Legs' }, { id: 402, name: 'Rune Legs' },
-                                { id: 1279, name: 'Dragon Legs' }
+                                { id: 206, name: 'Bronze Plate Legs' }, { id: 121, name: 'Steel Plate Legs' },
+                                { id: 125, name: 'Adamantite Plate Legs' }, { id: 402, name: 'Rune Plate Legs' }
                             ];
                         } else if (armorChoice === 3) {
                             itemsToShow = [
-                                { id: 4, name: 'Wooden Shield' }, { id: 48, name: 'Steel Kite' },
-                                { id: 56, name: 'Addy Kite' }, { id: 403, name: 'Rune Kite' },
-                                { id: 1276, name: 'Dragon Sq' }
+                                { id: 4, name: 'Wooden Shield' }, { id: 48, name: 'Steel Kite Shield' },
+                                { id: 56, name: 'Adamantite Kite Shield' }, { id: 403, name: 'Rune Kite Shield' },
+                                { id: 1276, name: 'Dragon Sq Shield' }
                             ];
                         }
                     } else if (catChoice === 2) {
